@@ -1,0 +1,86 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+BEGIN_COMMENT
+#+STYLE: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+STYLE: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+END_COMMENT
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil 
+
+#+TITLE: GCSE Systems & Control Theory
+#+AUTHOR: Stephen Brown
+#+OPTIONS: toc:nil f:nil author:nil num:nil creator:nil timestamp:nil 
+
+#+BEGIN_HTML
+<div class=ribbon>
+<a href="https://github.com/stsb11/gcse_theory">Fork me on GitHub</a>
+</div>
+#+END_HTML
+* [[file:1.html][Lesson 01 - Basics]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+* [[file:2.html][Lesson 02 - Materials]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+* [[file:3.html][Lesson 03 - Maths]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+* [[./4.html][Lesson 04 - 555 Timers]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+* [[file:5.html][Lesson 05 - Motion]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+* [[./6.html][Lesson 06 - Drive Systems]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+* [[./7.html][Lesson 07 - Mechanisms]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+* [[./8.html][Lesson 08 - Gear Ratios]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+* [[./9.html][Lesson 09 - Systems Analysis and Design Specifications]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+* [[./10.html][Lesson 10 - System Block Diagrams]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+* [[./11.html][Lesson 11 - Circuit Design and Manufacture]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+* [[./12.html][Lesson 12 - System Design]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+* [[./13.html][Lesson 13 - Systems Analysis and Design Specifications]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+* [[./14.html][Lesson 14 - PIC Programming]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+* [[./15.html][Lesson 15 - Logic Gates]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+* [[./16.html][Lesson 16 - Social, Moral, Ethical and Sustainability Issues]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+* [[./exmaples.html][Model Past Paper solutions]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
