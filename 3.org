@@ -6,7 +6,7 @@
 #+STYLE: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
 #+END_COMMENT
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil 
-#+TITLE: Materials
+#+TITLE: Mathematics for Electronics
 #+AUTHOR: Stephen Brown
 
 #+BEGIN_HTML
@@ -102,106 +102,141 @@ Imagine you wanted to make a flashing bike light; using an LED and a switch alon
 In a board game, you might want to have an electronic dice to roll numbers from 1 to 6 for you. 
 In a car, a circuit is needed to ensure that the airbags only deploy when there is a sudden change in speed, AND the passenger is wearing their seatbelt, AND the front or rear bumper has been struck. PIC chips can carry out their instructions very quickly, performing around 1000 instructions per second - as such, they can react far more quickly than a person can. 
 * Introduction
-- When creating a new product, one consideration is what to make it from. When choosing a material, there are a number of considerations. How should it look when it’s finished (aesthetics)? Can it be formed and joined in the way you want it to? Is it strong enough for the task? Is it cost-effective? Is the material “sustainable”? 
-
-Task: Complete the following tables, using the Internet and text book to help you. 
+- To be successful at electronics, you only need a small number of equations. 
 
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-** Common woods
+** Ohm's Law
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- Woods come from trees, which are chopped down, then worked into sheets of wood, or planks. As a natural product, they are sustainable (if the forest they come from is being re-planted), and have an attractive grain in the wood.  
-| Wood  | Category | Colour      | Properties             | Common Uses      |
-|-------+----------+-------------+------------------------+------------------|
-| Pine  |          |             | Durable, machines well |                  |
-| Oak   |          |             |                        | Furniture Making |
-| Beech |          | Light brown |                        |                  |
-| Larch | Softwood |             |                        |                  |
+- *V = IR*
+- *V* is Voltage, measured in Volts,
+- *I* is current, measured in Amperes (Amps for short),
+- *R* is resistance, measured in Ohms (\Omega{}).
 
-** Manufactured boards
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: learn
-:END:
-- Man-made boards are those which are produced in factories. They tend to have a uniform appearance, and have unique properties. 
-| Board     | Colour                       | Properties                                                | Common Uses                      |
-|-----------+------------------------------+-----------------------------------------------------------+----------------------------------|
-| Cardboard |                              |                                                           |                                  |
-| MDF       |                              |                                                           | Cupboard doors                   |
-| Plywood   |                              | Strong; comes in different finishes to improve appearance |                                  |
-| Chipboard | Brown, with a coarse texture |                                                           |                                  |
-| Hardboard |                              |                                                           | Furniture, flooring construction |
- 
-** Plastics
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: learn
-:END:
-- Often derived from oil, plastics provide a variety of durable materials which can be formed easily into whatever shape is required, and can be highly durable. Their relatively low cost has led to their popularity for use in all manner of every day objects. Unfortunately, plastics tend not to be easily bio-degradable (often taking several hundred years to break down in landfill), and as such need to be recycled wherever possible. 
-- Plastics can be either classed as thermosetting, or thermoplastic. When forming them into a shape, *Thermosetting* polymers normally need to be mixed with a curing agent, which allows them to set solid. Once set, they cannot be re-formed into another shape. *Thermoplastics* can be repeatedly heated until soft, then cast into a new shape and cooled.
-| Plastic           | Category      | Properties                     | Common Uses                  |
-|-------------------+---------------+--------------------------------+------------------------------|
-| Acrylic           | Thermoplastic |                                |                              |
-| ABS               |               | High impact resistance, strong |                              |
-| HIPS              |               |                                | Packaging                    |
-| PP                |               |                                | Plastic pipes, school chairs |
-| Nylon             |               | Hard wearing                   |                              |
-| Urea Formaldehyde | Thermoset     |                                |                              |
+_Example_
+According to its datasheet, an LED can take a maximum of 3V, and has a safe current of up to 20mA. If powered by a 6v battery, what size resistor will be needed to protect it?
 
-* Metals
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: learn
-:END:
-- Metals come from ores which are dug from the ground, and purified. They can be cast into sheets, or ingots ready for forming into different shapes. 
-- Some metals can be combined with other materials to form *alloys*, which have new, unique properties. Steel is made by combining iron and carbon, for instance. 
-- Ferrous metals are those which contain iron.
-| Metal           | Category    | Colour | Properties                                 | Common Uses      |
-|-----------------+-------------+--------+--------------------------------------------+------------------|
-| Copper          | Non-ferrous |        | Excellent electrical and thermal conductor |                  |
-| Mild Steel      |             |        |                                            | Nuts, bolts, etc |
-| Aluminium       |             | Grey   |                                            |                  |
-| Stainless Steel | Ferrous     |        |                                            |                  |
+Let’s aim for 2.5V and 20mA, to ensure we don’t have any problems. If we have 6V in the circuit, we need the resistor to remove *3.5V* (6 - 2.5) from the circuit, leaving 2.5V for the LED. We can then say that…
 
-** Smart Materials
+V=3.5
+
+I=0.02
+
+Re-arranging the formula gives R = V / I
+
+Therefore R = 3.5 / 0.02 = *175Ω*
+
+As an aside, it turns out that 175Ω isn’t a standard resistor size we can buyfrom a shop, so we go to the next largest size, which is 180Ω (220Ω would also work well).
+
+** Electrical Power
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- 
-| Material                     | Properties                                                           | Common Uses                     |
-|------------------------------+----------------------------------------------------------------------+---------------------------------|
-| Smart memory Alloys          | Can be bent out of shape, but returns to original shape when heated. |                                 |
-| Piezoelectric materials      |                                                                      | Mics, speakers, alarm systems.  |
-| Quantum Tunnelling compsite  | An insulator which becomes a conductor when put under pressure.      |                                 |
-| Electroluminescent Materials |                                                                      | Safety clothing, safety lights. |
+*P = VI*			
+
+- Power (Watts) = Voltage x Current
+
+_Example_
+Is a 0.25W resistor adequate for the example above? 
+
+The amount of power the resistor has to dissipate can be calculated as… 
+
+P = 3.5 x 0.02 = *0.07W*
+
+- Since the resistor can dissipate up to 0.25W, this resistor could safely handle the current from up to three LEDs. 
+
+** Resistors in Series
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+To calculate the overall resistance achieved when connecting together resistors in series, we add them together. E.g.
+
+R_{T} = R_{1} + R_{2}
+
+_Example_ Two resistors are connected together in series in a circuit. The colour codes on the first resistor is green, blue, black, gold. The colour code on the second resistor has been rubbed off. When a multi-meter is placed across both resistors, the meter reads 276Ω. What is the resistance of the unmarked resistor?
+
+276 = 56 + R_{2}
+
+R_{2} = 276 - 56 = 220Ω
+
+** Potential Divider
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- The potential divider setup allows electronic engineers to create different voltage levels in a circuit. This can be useful when connecting analogue components to a PIC. 
+[[./img/pot_div.png]]
+V_{1} = (R_{1} / (R_{1} + R_{2})) x Supply voltage (V_{S})
+
+V_{2} = (R_{2} / (R_{1} + R_{2})) x Supply Voltage (V_{S})
+
+_Example_ A 9V battery supplies a potential divider.  Two 1kΩ resistors are used. What is the voltage at V_{1}?
+
+V_{1} = (1000 / (1000+1000)) x 9
+
+V_{1} = (1000 / 2000) x 9
+
+V_{1} = (0.5) x 9 = 4.5V 
 
 * Understanding Check
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
+** Sample Questions
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- A 9v DC motor motor rated at 0.673A is to be powered by a 12V supply. What size resistor should be used to make it run at it’s maximum speed?
+
+- A 60W lightbulb in a house is running on a standard 230V AC power supply. How much current does it draw?
+
+- UK fuses can be 1A, 3A, 5A or 13A. This refers to how much current can be drawn through the fuse without it “blowing”. What size fuse should be fitted to a 1600W hairdryer?
+
+- A circuit being designed has a 12V supply, but needs a 3V rail, to be made with a potential divider. Suggest two resistor values that could provide this, and confirm it in circuit wizard.
+
+- What’s the overall resistance achieved by connecting together 3x 100Ω resistors in series in a circuit?
+
 ** Past Paper Questions
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-*June 2010, Q5a*. This question is about programming a greenhouse temperature / environmental control system model. The greenhouse model has a heat sensor, and a roof vent that opens and closes to regulate the temperature.
+*June 2010, Q3c*. The following circuit diagram shows a simple potential divider light sensor circuit. 
+[[./img/2010_q3c.png]]
+(i) Name the component labelled R1. /(1 mark)/
+(ii) Name the component labelled R2. /(1 mark)/
+(iii) Calculate the output voltage when R1 is 1K, R2 is 2K and the supply voltage is 9V.
 
-(a) (i) Suggest a specific material for the greenhouse frame. /(2 marks)/
+Formula: 
 
-(a) (ii) Explain why the material that you have selected is suitable. /(2 marks)/
+Working: 
 
-(a) (iii) Suggest a suitable component to sense that the roof vent is closed. /(2 marks)/
+Answer with units: 
 
-*June 2011, Q4a*. This question is about a washing machine control system model. The washing machine model is made from plywood and has: -
-- a door that opens and shuts
-- a button to start the simulated wash
-- a door lock to stop the door opening
-- a geared motor to turn the wash drum
-- an LED that lights to show that the drum is turning. 
-[[./img/2011_q4a.png]]
-(a) (i) Suggest a suitable plastic for the window in the door. /(1 mark)/
+/(4 marks)/
 
-4 (a) (ii) Explain why the plastic you have named is suitable. /(2 marks)/
+*June 2012, Q6b*. Calculate the value of the total resistance of the following resistors in series.
+[[./img/2012_q6b.png]]
+Formula: 
 
-4 (a) (iii) Suggest a suitable component to operate the door lock. /(1 mark)/
+Calculation: 
+
+Answer:
+
+/(4 marks)/
+
+
+*June 2012, Q6d*. The circuit below is a light sensor. The resistance of the LDR is 5KΩ and the resistance of the fixed resistor is 10KΩ.
+[[./img/2012_q6d.png]]
+Calculate the output voltage (V2) when Vs is 9 Volts.
+
+Formula: 
+
+Calculation: 
+
+Answer:
+
+/(4 marks)/
 
 [[file:index.html][Return to homepage]]
