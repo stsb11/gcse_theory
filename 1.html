@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Basics</title>
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Basics</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Introduction</a>
+<ul>
+<li><a href="#sec-1-1">Voltage, Resistance and Current</a></li>
+<li><a href="#sec-1-2">Try it</a></li>
+<li><a href="#sec-1-3">One more thing&#x2026;</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2. Component Identification</a>
+<ul>
+<li><a href="#sec-2-1">Past Paper Questions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class=ribbon>
+<a href="https://github.com/stsb11/gcse_theory">Fork me on GitHub</a>
+</div>
+<center>
+<imgzz src='' width=33%>
+</center>
+
+<div id="outline-container-sec-1" class="outline-2 activity">
+<h2 id="sec-1"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-sec-1-1" class="outline-3 learn">
+<h3 id="sec-1-1">Voltage, Resistance and Current</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Before you can do anything to design and create new, original projects, you'll need to understand three fundamental electronic concepts. 
+</li>
+<li><b>Voltage</b>, is the difference in energy level between two points in a circuit, which will allow electrons to move through a conductor. The more difference in energy levels there is, the larger the amount of current can be drawn, and the larger item they can power. A basic red LED might only need 2.7V to run, whereas a laptop might need 24V, and a large electric motor moving a lift might need 415V to operate. 
+</li>
+<li><b><b>Current</b></b> is a measure of how many electrons pass a particular point in the circuit per second. Higher current (measured in Amps) means faster electron flow in the circuit. The process of moving electrons through a material generates frictional heat. If the wire used in a product is too thin, and too much current passes through it, the wire will melt! This is the principal on which fuses are made. 
+</li>
+<li><b><b>Resistance</b></b> is a measure of to what extent a material resists the flow of current in a circuit, and is measured in Ohms. Good conductors of electricity (like copper and gold) have very low resistance (1-2 &Omega;), and insulators (like rubber and plastic) have a high resistance (several million Ohms). 
+</li>
+<li>An excellent explanation of this can be seen over at <a href="https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law">SparkFun</a>. 
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3 try">
+<h3 id="sec-1-2">Try it</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>Resistors are components which are designed to provide carefully controlled amounts of resistance; ideal when designing circuits. The coloured bands on a resistor tell you what the value of the resistor is. 
+</li>
+</ul>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="right" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="right">&#xa0;</th>
+<th scope="col" class="left">&#xa0;</th>
+<th scope="col" class="left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="right">Value</td>
+<td class="left">Colour</td>
+<td class="left">Mnemonic</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="right">0</td>
+<td class="left">Black</td>
+<td class="left">Bye</td>
+</tr>
+
+<tr>
+<td class="right">1</td>
+<td class="left">Brown</td>
+<td class="left">Bye</td>
+</tr>
+
+<tr>
+<td class="right">2</td>
+<td class="left">Red</td>
+<td class="left">Rosie</td>
+</tr>
+
+<tr>
+<td class="right">3</td>
+<td class="left">Orange</td>
+<td class="left">Off</td>
+</tr>
+
+<tr>
+<td class="right">4</td>
+<td class="left">Yellow</td>
+<td class="left">You</td>
+</tr>
+
+<tr>
+<td class="right">5</td>
+<td class="left">Green</td>
+<td class="left">Go</td>
+</tr>
+
+<tr>
+<td class="right">6</td>
+<td class="left">Blue</td>
+<td class="left">Bristol</td>
+</tr>
+
+<tr>
+<td class="right">7</td>
+<td class="left">Violet</td>
+<td class="left">Via</td>
+</tr>
+
+<tr>
+<td class="right">8</td>
+<td class="left">Grey</td>
+<td class="left">Great</td>
+</tr>
+
+<tr>
+<td class="right">9</td>
+<td class="left">White</td>
+<td class="left">Western</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
+<li>Get someone to give you 4 different resistors. Read the coloured bands to see what their values are, and then use the <a href="https://www.bournetoinvent.com/projects/soldering_license/step_5.html">multimeter</a> to confirm. 
+</li>
+<li>Choosing the correct setting to measure DC Voltage (DCV) is the same as for measuring resistance. It doesn't really make a difference, but its more "correct" to use the black (common) probe for the negative end of the battery, and the red on the right.
+</li>
+<li><p>
+Use the multimeter to discover how many volts each of the following produces:
+</p>
+<ul class="org-ul">
+<li>Square battery (PP3)
+</li>
+</ul>
+<ul class="org-ul">
+<li>AA battery
+</li>
+<li>AAA battery
+</li>
+<li>CR2032
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-3" class="outline-3 learn">
+<h3 id="sec-1-3">One more thing&#x2026;</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>If you connect the positive terminal of a battery directly to the negative (e.g. with a wire), the battery gets very hot. The battery rapidly looses all its charge.
+</li>
+<li>What's happening is that because there is no "load" on the circuit (no components to pass through to slow the current flow), electrons are able to fly around the battery unimpeded, as fast as they possibly can.
+</li>
+<li>The ultra-fast movement of electrons generates a lot of heat. If the power source is one designed to carry a lot of current (e.g. a car battery) and it is shorted out, this can cause the battery to spark or even explode! This is why mechanics are very careful not to drop (metal) spanners on top of car batteries. 
+</li>
+<li>Then this happens, this is called a <b><b>short circuit</b></b>, or "short". 
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-2" class="outline-2 activity">
+<h2 id="sec-2"><span class="section-number-2">2</span> Component Identification</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-sec-2-1" class="outline-3 learn">
+<h3 id="sec-2-1">Past Paper Questions</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>Before you can start to read circuit diagrams (and go on to create new ones), you'll need to be able to identify the basic electronic component symbols. These questions are from actual past exam papers, so are a great way to build your skill set&#x2026;
+</li>
+<li><b>June 2010, Q3</b>. You are advised to spend about 20 minutes on this question. This question is about identifying components and their uses.
+</li>
+</ul>
+
+<p>
+(a) For the following electronic components, give the component name and the electronic building block <i>(input, process or output)</i> it would be used for. <i>(10 marks)</i>
+</p>
+
+
+<div class="figure">
+<p><img src="./img/2010_q3.png" alt="2010_q3.png" />
+</p>
+</div>
+
+<ul class="org-ul">
+<li><b>June 2011, Q2</b>. You should spend about 20 minutes on this question. This question is about identifying components and stating if they are analogue or digital.
+</li>
+</ul>
+
+<p>
+(a) Give the Component name for the following electronic components, and tick the box to show whether a component is digital or analogue.
+</p>
+
+
+<div class="figure">
+<p><img src="./img/2011_q2.png" alt="2011_q2.png" />
+</p>
+</div>
+
+<p>
+(b) Circle the method that MP3 players use to store music tracks.
+Analogue        Digital                FER                Logic        (1 mark)
+</p>
+
+<p>
+(c) Clocks can have either analogue or digital displays to show the time.
+2 (c) (i) Sketch a clock with an analogue display. (1 mark)
+</p>
+
+<p>
+2 (c) (ii) Sketch a clock with a digital display. (1 mark)
+</p>
+
+<p>
+(d) Electronic data can be recorded and stored in either digital or analogue format.
+</p>
+
+<p>
+2 (d) (i) Give one advantage of recording data in a digital format. (2 marks)
+</p>
+
+<p>
+2 (d) (ii) Give one advantage of recording data in an analogue format. (2 marks)
+</p>
+
+<p>
+<b>June 2012, Q5b</b>. This question is about a simple coffee vending machine. The hot water valve is controlled by the coffee vending machine control system. Name the most suitable component to operate the valve. (1 mark)
+</p>
+
+<p>
+<b>June 2012, Q6</b>. You are advised to spend about 15 minutes on this question. This question is about components. (a) Identify the following component symbols. <i>(6 marks)</i>
+</p>
+
+
+<div class="figure">
+<p><img src="./img/2012_q6.png" alt="2012_q6.png" />
+</p>
+</div>
+
+<p>
+<b>June 2012, Q6c</b>. Name this component. <i>(2 marks)</i>
+</p>
+
+
+<div class="figure">
+<p><img src="./img/2012_q6c.png" alt="2012_q6c.png" />
+</p>
+</div>
+
+<p>
+<a href="index.html">Return to homepage</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="validation"></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,207 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+BEGIN_COMMENT
+#+STYLE: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+STYLE: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+END_COMMENT
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil 
+#+TITLE: Materials
+#+AUTHOR: Stephen Brown
+
+#+BEGIN_HTML
+<div class=ribbon>
+<a href="https://github.com/stsb11/gcse_theory">Fork me on GitHub</a>
+</div>
+<center>
+<imgzz src='' width=33%>
+</center>
+#+END_HTML
+
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+e* Introduction
+[[file:img/pic.jpg]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: intro
+:END:
+** What are PIC chips?
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+Peripheral Interface Controllers are small silicon chips which can be programmed to perform useful tasks.
+In school, we tend to use Genie branded chips, like the C08 model you will use in this project. Others (e.g. PICAXE) are available.
+PIC chips allow you connect different inputs (e.g. switches) and outputs (e.g. LEDs, motors and speakers), and to control them using flowcharts.
+Chips such as these can be found everywhere in consumer electronic products, from toasters to cars. 
+
+While they might not look like much, there is more computational power in a single PIC chip used in school than there was in the space shuttle that went to the moon in the 60's!
+** When would I use a PIC chip?
+Imagine you wanted to make a flashing bike light; using an LED and a switch alone, you'd need to manually push and release the button to get the flashing effect. A PIC chip could be programmed to turn the LED off and on once a second.
+In a board game, you might want to have an electronic dice to roll numbers from 1 to 6 for you. 
+In a car, a circuit is needed to ensure that the airbags only deploy when there is a sudden change in speed, AND the passenger is wearing their seatbelt, AND the front or rear bumper has been struck. PIC chips can carry out their instructions very quickly, performing around 1000 instructions per second - as such, they can react far more quickly than a person can. 
+* Introduction
+- When creating a new product, one consideration is what to make it from. When choosing a material, there are a number of considerations. How should it look when it’s finished (aesthetics)? Can it be formed and joined in the way you want it to? Is it strong enough for the task? Is it cost-effective? Is the material “sustainable”? 
+
+Task: Complete the following tables, using the Internet and text book to help you. 
+
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Common woods
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Woods come from trees, which are chopped down, then worked into sheets of wood, or planks. As a natural product, they are sustainable (if the forest they come from is being re-planted), and have an attractive grain in the wood.  
+| Wood  | Category | Colour      | Properties             | Common Uses      |
+|-------+----------+-------------+------------------------+------------------|
+| Pine  |          |             | Durable, machines well |                  |
+| Oak   |          |             |                        | Furniture Making |
+| Beech |          | Light brown |                        |                  |
+| Larch | Softwood |             |                        |                  |
+
+** Manufactured boards
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Man-made boards are those which are produced in factories. They tend to have a uniform appearance, and have unique properties. 
+| Board     | Colour                       | Properties                                                | Common Uses                      |
+|-----------+------------------------------+-----------------------------------------------------------+----------------------------------|
+| Cardboard |                              |                                                           |                                  |
+| MDF       |                              |                                                           | Cupboard doors                   |
+| Plywood   |                              | Strong; comes in different finishes to improve appearance |                                  |
+| Chipboard | Brown, with a coarse texture |                                                           |                                  |
+| Hardboard |                              |                                                           | Furniture, flooring construction |
+ 
+** Plastics
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Often derived from oil, plastics provide a variety of durable materials which can be formed easily into whatever shape is required, and can be highly durable. Their relatively low cost has led to their popularity for use in all manner of every day objects. Unfortunately, plastics tend not to be easily bio-degradable (often taking several hundred years to break down in landfill), and as such need to be recycled wherever possible. 
+- Plastics can be either classed as thermosetting, or thermoplastic. When forming them into a shape, *Thermosetting* polymers normally need to be mixed with a curing agent, which allows them to set solid. Once set, they cannot be re-formed into another shape. *Thermoplastics* can be repeatedly heated until soft, then cast into a new shape and cooled.
+| Plastic           | Category      | Properties                     | Common Uses                  |
+|-------------------+---------------+--------------------------------+------------------------------|
+| Acrylic           | Thermoplastic |                                |                              |
+| ABS               |               | High impact resistance, strong |                              |
+| HIPS              |               |                                | Packaging                    |
+| PP                |               |                                | Plastic pipes, school chairs |
+| Nylon             |               | Hard wearing                   |                              |
+| Urea Formaldehyde | Thermoset     |                                |                              |
+
+* Metals
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Metals come from ores which are dug from the ground, and purified. They can be cast into sheets, or ingots ready for forming into different shapes. 
+- Some metals can be combined with other materials to form *alloys*, which have new, unique properties. Steel is made by combining iron and carbon, for instance. 
+- Ferrous metals are those which contain iron.
+| Metal           | Category    | Colour | Properties                                 | Common Uses      |
+|-----------------+-------------+--------+--------------------------------------------+------------------|
+| Copper          | Non-ferrous |        | Excellent electrical and thermal conductor |                  |
+| Mild Steel      |             |        |                                            | Nuts, bolts, etc |
+| Aluminium       |             | Grey   |                                            |                  |
+| Stainless Steel | Ferrous     |        |                                            |                  |
+
+** Smart Materials
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- 
+| Material                     | Properties                                                           | Common Uses                     |
+|------------------------------+----------------------------------------------------------------------+---------------------------------|
+| Smart memory Alloys          | Can be bent out of shape, but returns to original shape when heated. |                                 |
+| Piezoelectric materials      |                                                                      | Mics, speakers, alarm systems.  |
+| Quantum Tunnelling compsite  | An insulator which becomes a conductor when put under pressure.      |                                 |
+| Electroluminescent Materials |                                                                      | Safety clothing, safety lights. |
+
+* Understanding Check
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Past Paper Questions
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+*June 2010, Q5a*. This question is about programming a greenhouse temperature / environmental control system model. The greenhouse model has a heat sensor, and a roof vent that opens and closes to regulate the temperature.
+
+(a) (i) Suggest a specific material for the greenhouse frame. /(2 marks)/
+
+(a) (ii) Explain why the material that you have selected is suitable. /(2 marks)/
+
+(a) (iii) Suggest a suitable component to sense that the roof vent is closed. /(2 marks)/
+
+*June 2011, Q4a*. This question is about a washing machine control system model. The washing machine model is made from plywood and has: -
+- a door that opens and shuts
+- a button to start the simulated wash
+- a door lock to stop the door opening
+- a geared motor to turn the wash drum
+- an LED that lights to show that the drum is turning. 
+[[./img/2011_q4a.png]]
+(a) (i) Suggest a suitable plastic for the window in the door. /(1 mark)/
+
+4 (a) (ii) Explain why the plastic you have named is suitable. /(2 marks)/
+
+4 (a) (iii) Suggest a suitable component to operate the door lock. /(1 mark)/
+
+[[file:index.html][Return to homepage]]
