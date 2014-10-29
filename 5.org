@@ -1,0 +1,163 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+BEGIN_COMMENT
+#+STYLE: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+STYLE: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+END_COMMENT
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil 
+#+TITLE: Basic Motion
+#+AUTHOR: Stephen Brown
+
+#+BEGIN_HTML
+<div class=ribbon>
+<a href="https://github.com/stsb11/gcse_theory">Fork me on GitHub</a>
+</div>
+<center>
+<imgzz src='' width=33%>
+</center>
+#+END_HTML
+
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+e* Introduction
+[[file:img/pic.jpg]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: intro
+:END:
+** What are PIC chips?
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+Peripheral Interface Controllers are small silicon chips which can be programmed to perform useful tasks.
+In school, we tend to use Genie branded chips, like the C08 model you will use in this project. Others (e.g. PICAXE) are available.
+PIC chips allow you connect different inputs (e.g. switches) and outputs (e.g. LEDs, motors and speakers), and to control them using flowcharts.
+Chips such as these can be found everywhere in consumer electronic products, from toasters to cars. 
+
+While they might not look like much, there is more computational power in a single PIC chip used in school than there was in the space shuttle that went to the moon in the 60's!
+** When would I use a PIC chip?
+Imagine you wanted to make a flashing bike light; using an LED and a switch alone, you'd need to manually push and release the button to get the flashing effect. A PIC chip could be programmed to turn the LED off and on once a second.
+In a board game, you might want to have an electronic dice to roll numbers from 1 to 6 for you. 
+In a car, a circuit is needed to ensure that the airbags only deploy when there is a sudden change in speed, AND the passenger is wearing their seatbelt, AND the front or rear bumper has been struck. PIC chips can carry out their instructions very quickly, performing around 1000 instructions per second - as such, they can react far more quickly than a person can. 
+* Introduction
+- The difference between studying Systems and Control and electronics is that you will need to be able to use your circuits to make things happen in the real world. One of the coursework projects you might be asked to complete is a humane mousetrap, for instance. The first thing to understand is the four types of motion…
+
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Rotary
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- [[http://en.wikipedia.org/wiki/Rotation_around_a_fixed_axis][Rotary]] motion is defined as being, “rotation around a fixed axis”. 
+
+- Examples of this could be a drill, a wheel or a desktop fan. 
+** Oscillating
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- [[http://en.wikipedia.org/wiki/Oscillation][Oscillating]] motion is defined as, “repetitive change between two different states”. Examples are windscreen wipers, or a clock pendulum. 
+** Linear
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- [[http://en.wikipedia.org/wiki/Linear_motion][Linear]] motion is “motion along a straight line”. Examples are a paper guillotine, or a train travelling along a track. 
+** Reciprocating
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- [[http://en.wikipedia.org/wiki/Reciprocating_motion][Reciprocating]] motion is “a repetitive back and forth motion in a straight line”. Examples could be cutting with a saw or a piston in an engine.
+
+* Recap
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Sample Questions
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+*Task 1:* Find two more examples of each type of motion.
+
+In addition to these basic forms of motion, it is sometimes desirable to convert one type of motion into another. 
+
+*Task 2:* Find out how to convert each of the following: -
+
+i) Rotary to Linear, 
+
+ii) Linear to Rotary, 
+
+iii) Rotary to Reciprocating and
+
+iv) Oscillating to Rotary.
+
+Tip: You may find [[http://www.bbc.co.uk/schools/gcsebitesize/design/systemscontrol/][this]] site helpful, as well as pages 61 and 65 of the textbook.
+
+** Past Paper Questions
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+
+[[file:index.html][Return to homepage]]
