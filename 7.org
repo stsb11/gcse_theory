@@ -6,7 +6,7 @@
 #+STYLE: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
 #+END_COMMENT
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil 
-#+TITLE: Drive Systems
+#+TITLE: Mechanisms
 #+AUTHOR: Stephen Brown
 
 #+BEGIN_HTML
@@ -14,7 +14,7 @@
 <a href="https://github.com/stsb11/gcse_theory">Fork me on GitHub</a>
 </div>
 <center>
-<img src='./img/gear.png' width=33%>
+<img src='./img/gear.png' width=25%>
 </center>
 #+END_HTML
 
@@ -102,76 +102,36 @@ Imagine you wanted to make a flashing bike light; using an LED and a switch alon
 In a board game, you might want to have an electronic dice to roll numbers from 1 to 6 for you. 
 In a car, a circuit is needed to ensure that the airbags only deploy when there is a sudden change in speed, AND the passenger is wearing their seatbelt, AND the front or rear bumper has been struck. PIC chips can carry out their instructions very quickly, performing around 1000 instructions per second - as such, they can react far more quickly than a person can. 
 * Introduction
-- With an understanding of the types of motion, we can start to look at different ways of using them to achieve different outcomes. All tools and machines are made up of mechanisms; a complicated machine is lots of mechanisms working together. Mechanisms are used to improve our own abilities, e.g. we can hit a nail harder with a hammer (a lever mechanism) than we can by hitting it with a stone held in the hand and we can move faster on a bicycle than by running.
-- All mechanisms are to do with movement and energy. Every mechanism can be split into three parts:
+- In order to make useful new machines and products, a systems engineer needs to be able to understand electronics (to create control circuitry), drive systems (to understand different electromechanical options such as servo motors) and mechanisms in order to produce motion of the required type to solve the problem at hand. 
+- This typically involves understanding gears, belt/pulley systems and different linkages. You need to ensure you know of suitable linkages to convert between different types of motion. 
+- BBC Bitesize has a superb set of pages (with interactive demonstrations) showing different mechanisms, and is available [[http://www.bbc.co.uk/schools/gcsebitesize/design/systemscontrol/mechanismsrev1.shtml][here]]. 
 
-
-- *Input* – the energy put in, e.g. the squeezing together of the handles of a pair of scissors.
-- *Process* – the movement of the mechanism, e.g. the movement of the scissors blades.
-- *Output* - the result of the process, e.g. cutting paper.
-
-- Many mechanisms change one type of movement to another.
-
-* Drive Systems
+* Converting motion
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-** Gears
+** Rotary to Oscillating
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- [[http://en.wikipedia.org/wiki/Gear][Gears]] (/found in food mixers, cars, bicycles, etc/) incorporate teeth in their design. Because of this, they have the advantage of not slipping, but are expensive to manufacture and can be noisy.
+- The *Treadle linkage* (seen in windscreen wipers) is used to convert rotary motion to oscillating motion, or vice-versa. Pre-electricity sewing machines often had a foot operated treadle that was used to drive a wheel. 
+[[./img/treadle.png]]
+- In the diagram, the rotary prime mover is connected to an connecting rod (or /"conrod"/ for short) on a fixed pivot, causing smooth oscillating motion as the crank is turned. 
 
-[[./img/gears.png]]
-
-- Gears are used for a multitude of different applications. They can be seen in cars, microwave ovens, lifts, automated doors, children’s toys, desktop fans and many other places. There are several different types of gear terminology you will need to know about for the exam. In the picture above, the gear on the left (if it were connected to a motor) would be referred to as the *driver* gear. The one on the far right would be the *driven* gear, and the ones in the middle are referred to as *idler* gears. The main definitions you need to know are:
-  - *Gear:* A toothed wheel of varying diameter.
-  - *Simple gear train:* Two gears meshed together.
-  - *Compound gear train:* More than two gears meshed together.
-  - *Gear ratio:* The ratio between a driver gear and its driven gear.
-  - *Idler gear:* A gear inserted between two or more other gear wheels.
-
-** Other Gear Configurations
+- The *Peg and slot* linkage performs the same conversion of motion, but the motion is not smooth. 
+[[./img/peg_slot.png]]
+- In the diagram above, as the rear disk rotates clockwise initially, the slot part will move quickly to the right, as the peg is close to the pivot point at the top. Once the peg is towards the bottom of the wheel (after 180 degrees of rotation), the slot part will move more slowly, as it is further from the pivot. 
+** Rotary to Reciprocating/Linear
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- *Worm drive:* A worm drive (image shown to the right) is a non-slip gearing system for transmitting higher torque at lower speeds.
-[[./img/worm.png]]
-
-- *Rack and Pinion gear:* Used to convert rotary motion to linear motion, as seen in steering systems on cars, and mountain railways.
-
-- *Bevel gear:* Gears which allow transmission of drive through 90º. 
-[[./img/bevel.png]]
-Systems will often require that motion to be transferred from one place to another; this can be achieved with linkages (which are discussed below) or by using either belts or chains. 
-
-//Tip:// You may find this site helpful, as well as pages 66 and 69 of the textbook.
-
-** Belts and Pulleys
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: learn
-:END:
-- [[http://en.wikipedia.org/wiki/Pulley#Belt_and_pulley_systems][Belts and pulleys]] are one of the oldest ways to transmit drive, and can be seen on Victorian steam engines, car engines and tools such as lathes and drills. While they are excellent for covering distances between pulleys, they are susceptible to slipping in wet conditions, and the belts can stretch (/and break/) over time. 
-- [[http://en.wikipedia.org/wiki/Sprocket][Chains and sprockets]] are a non-slip alternative. 
-** Tribology (Friction)
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: learn
-:END:
-- Friction is a force resisting motion, which generates heat. In engineering, friction can either be advantageous or disadvantageous, depending upon the situation. 
-
-- In a car’s brakes, friction is used to stop a car, by pads being pushed tightly against the inside of the wheel to generate friction and prevent the wheels from turning (by transferring kinetic energy into heat). 
-[[./img/disc_brakes.png]]
-
-- In a car engine, or its gearbox, friction between two metal gears as they rub together causes the parts to wear, unwanted heat to be generated  and reduces the efficiency of the engine – this friction can be reduced by using a lubricant (such as engine oil). In electronics, nylon gears are both tough and self-lubricating, and so are an ideal choice for small projects. 
-
-** Mechanical Advantage
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: learn
-:END:
-- When a mechanism such as a lever improves the effect of an effort, the mechanism is said to have provided a Mechanical Advantage (MA). To work out what this is, the following formula can be used: MA = LOAD ÷ EFFORT
-
-*Task:* One example of a mechanical system are levers. Identify the three different classes of levers, create a diagram for each (indicating the location of the load, effort and fulcrum), and give an example of where each can be seen in real life. 
-
-/Tip:/ You may find [[http://en.wikipedia.org/wiki/Linkage_(mechanical)][this]] page of some use, as well as pages 64-65 of the text book. 
+- *Rack and Pinion gear:* Used to convert rotary motion to linear motion, as seen in steering systems on cars, lock-gates on rivers, and on  mountain railways. This system has many applications, and a large percentage of both GCSE and A level system design questions can be solved with the creative use of these. 
+[[./img/rack_pinion.png]]
+- *Crank, link and Slider:* Another excellent method of achieving this conversion. Remember that when these systems in the real world, the output slider will need guides to help it move in the desired way.
+[[./img/crank_slider.png]]
+- *Cam and follower:* A shaped piece of material, fixed to a rotating shaft, cams are found in car engines (where the exploding petrol in the car's cylinders force followers up against a shaft containing several cams, causing it to spin) and many other mechanisms.  
+[[./img/cam.gif]]
+- An excellent guide to cams can be seen on the BBC Bitesize site, [[http://www.bbc.co.uk/schools/gcsebitesize/design/systemscontrol/mechanismsrev4.shtml][here]].
 * Recap
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -180,85 +140,73 @@ Systems will often require that motion to be transferred from one place to anoth
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-*June 2007, Q1(f)* A Double Pole Double Throw (DPDT) switch can be used to control the forward and reverse direction of a motor. Complete the diagram below to show a reversing circuit. Marks will be awarded for: 
-Power supply connected to switch. /(2 marks)/
-Switch connected to the motor.  /(4 marks)/
-[[./img/2007_q1f.png]]
+*June 2007, Q7.* This question is about mechanisms and mechanical components. The chain and sprocket shown below is part of a drive system for a cooling fan in a tram. The smaller sprocket is connected to an electric motor and the larger sprocket is connected to the fan.
+[[./img/2007_q7.png]]
+The motor spins at 10 000 revolutions per minute (rpm).
 
-*June 2010, Q6.(b)* A system is to be developed to automatically open and close a set of curtains at regular time intervals. The curtains weigh 10 kg and the motor is connected directly to them with a belt. The motor rotates too fast and cannot move the curtains. Identify two problems with the drive system and suggest two possible modifications that could be made so that the existing motor can be used.
-Problem 1:
-Modification 1:
-Problem 2: 
-Modification 2: /(4 marks)/
-
-*6(c)(i)* Discuss the impact on the environment of using electrically powered curtains. /(3 marks)/
-*(c) (ii)* Suggest two environmentally friendly sources of mains electricity. /(2 marks)/
-*6 (c) (iii)* Give three advantages of environmentally friendly energy sources. /(3 marks)/
-
-*June 2011, Q3.* You should spend about 20 minutes on this question. This question is about drive systems.
-
-*3(a)* On each of the following diagrams, sketch and label suitable drive systems to connect the shafts. Make sure that the shafts rotate in the correct direction and at the correct speed. In each case name the drive system used.
-
-*3 (a)(i)* Two shafts rotating in close proximity, in opposite directions, at the same speed. /(3 marks)/
-[[./img/2011_q3ai.png]]
-*(a)(ii)* Name the drive system used. /(1 mark)/
-
-*(a)(iii)* Two shafts rotating a distance apart, in the same direction, at the same speed /(3 marks)/
-[[./img/2011_q3aii.png]]
-*3(a)(iv)* Name the drive system used. /(1 mark)/
-
-*(a)(v)* Two shafts rotating in close proximity, in opposite directions, at different speeds /(3 marks)/
-[[./img/2011_q3av.png]]
-*(a)(vi)* Name the drive system used. /(1 mark)/
-
-*(a)(vii)* Two shafts rotating at 90° to each other, in opposite directions, at the same speed. /Note:/ The shafts are drawn in 2D to simplify your sketch. /(3 marks)/
-[[./img/2011_q3avii.png]]
-*3(a)(viii)* Name the drive system used. /(1 mark)/
-
-(b) Friction can be an advantage or a disadvantage.
-
-*3(b)(i)* Give an example and explain why friction can be an advantage in a drive system. /(2 marks)/
-
-*3(b)(ii)* Give an example and explain why friction can be a disadvantage in a drive system. /(2 marks)/
-
-*June 2013, Q2.* You are advised to spend about 20 minutes on this question. This question is about mechanical drive systems.
-
-*2(a)* Complete the following table.
-[[./img/2013_q2.png]]
-Give an advantage and disadvantage of each type of drive system with an example of a product that uses the drive system. /(9 marks)/
-
-*2(b)* Friction can be an advantage or a disadvantage.
-Describe a system where friction is an advantage.
-Describe a system where friction is a disadvantage. /(2x2 marks)/
-
-*2(c)* Calculate the gear ratio of the gears below.
-[[./img/2013_q2c.png]]
-Formula:
-
-Calculation:
-
-Answer:
-
-/(3 marks)/
-
-*2(d)* Calculate the velocity ratio of the pulleys below.
-[[./img/2013_q2d.png]]
-Formula:
-
-Calculation:
-
-Answer: 
-
-/(3 marks)/
-
-*2(e)* Calculate the output speed of the pulley system above if the input speed is 1000 rpm.
+(a) Calculate the speed of the fan.
 
 Formula:
 
 Calculation:
 
-Answer:
+Answer with units: /(4 marks)/
 
-/(3 marks)/
+(b) Discuss the use of chain drives compared with other drive systems. /(4 marks)/
+
+(c) This part of the question is about a hand brake for a railway truck. Part of the truck is drawn below.
+[[./img/2007_q7ci.png]]
+(i) Draw a mechanical device between the fixed beam and the brake shoe, which will allow the driver to manually apply the brake shoe to the wheel.
+
+Complete the diagram to ensure that your solution will prevent the truck moving when the user lets go of the operating handle all parts you add are labelled.
+
+Marks will be awarded for designing a mechanical device that will force the brake shoe onto the wheel /(4 marks)/
+fixing the device to the fixed beam and the brake shoe /(2 marks)/
+quality of notes and sketches. /(2 marks)/
+
+(ii) State two advantages of your mechanism shown above for this application. /(2 marks)/
+
+(iii) Explain how your response to part (c)(i) could be modified to make it easier for the user to apply the hand brake. /(2 marks)/
+
+*June 2010, Q5a.* (iv) Sketch on the diagram below how a micro-switch could sense that the roof vent is closed. Marks will be awarded for: -
+a component mounted correctly /(1 mark)/
+the ability to sense that the vent was closed /(1 mark)/
+a good quality labelled sketch of the sensing system. /(2 marks)/
+[[./img/2010_q5a.png]]
+
+(v) Describe how your system in part (a) (iv) works. /(3 marks)/
+
+*June 2012, Q3.* (b) Draw and name a mechanism that will change rotary motion into oscillating motion. Label all parts for 4 marks. /(4 marks)/
+
+3 (c) Draw and name a mechanism that will transfer rotary motion through 90°. Label all parts for 4 marks. /(4 marks)/
+
+3 (d) Draw and name a mechanism that will increase or decrease the speed of rotation. Label all parts for 4 marks. /(4 marks)/
+
+*June 2012, Q4.* This question is about a car windscreen wiper system.
+4 (a) On the diagram below draw a mechanism that connects the motor to the wipers so that the two wipers move continually in the required motion.
+[[./img/2012_q4a.png]]
+Marks will be awarded for:
+adding labels to the diagram
+
+moving a wiper
+
+moving a wiper in correct motion
+
+moving both wipers in correct motion
+
+moving both wipers continuously
+
+drawing neatly in proportion. /(6 marks)/
+
+The car windscreen wiper system uses a cam and a switch so that the wipers always stop at the bottom of the windscreen when the driver turns them off.
+
+4 (b) Design a cam that will ensure that the wipers always stop at the same position. The switch should only be operated for a quarter of a turn. Draw the cam outline between the dotted guide circles: /(4 marks)/
+[[./img/2012_q4b.png]]
+
+4 (c) Name the switch shown above. 	/(1 mark)/
+
+4 (d) On the circuit below connect the motor and both switches to the power supply to ensure that the wipers operate when the Cam switch or the Drivers switch is ON. Both switches are shown not operated (OFF). /(5 marks)/
+[[./img/2012_q4d.png]]
+
 
 [[file:index.html][Return to homepage]]
