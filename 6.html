@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Drive Systems</title>
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Drive Systems</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Introduction</a></li>
+<li><a href="#sec-2">2. Drive Systems</a>
+<ul>
+<li><a href="#sec-2-1">Gears</a></li>
+<li><a href="#sec-2-2">Other Gear Configurations</a></li>
+<li><a href="#sec-2-3">Belts and Pulleys</a></li>
+<li><a href="#sec-2-4">Tribology (Friction)</a></li>
+<li><a href="#sec-2-5">Mechanical Advantage</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3. Recap</a>
+<ul>
+<li><a href="#sec-3-1">Past Paper Questions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class=ribbon>
+<a href="https://github.com/stsb11/gcse_theory">Fork me on GitHub</a>
+</div>
+<center>
+<img src='./img/gear.png' width=33%>
+</center>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>With an understanding of the types of motion, we can start to look at different ways of using them to achieve different outcomes. All tools and machines are made up of mechanisms; a complicated machine is lots of mechanisms working together. Mechanisms are used to improve our own abilities, e.g. we can hit a nail harder with a hammer (a lever mechanism) than we can by hitting it with a stone held in the hand and we can move faster on a bicycle than by running.
+</li>
+<li>All mechanisms are to do with movement and energy. Every mechanism can be split into three parts:
+</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>Input</b> – the energy put in, e.g. the squeezing together of the handles of a pair of scissors.
+</li>
+<li><b>Process</b> – the movement of the mechanism, e.g. the movement of the scissors blades.
+</li>
+<li><b>Output</b> - the result of the process, e.g. cutting paper.
+</li>
+
+<li>Many mechanisms change one type of movement to another.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2 activity">
+<h2 id="sec-2"><span class="section-number-2">2</span> Drive Systems</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-sec-2-1" class="outline-3 learn">
+<h3 id="sec-2-1">Gears</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li><a href="http://en.wikipedia.org/wiki/Gear">Gears</a> (<i>found in food mixers, cars, bicycles, etc</i>) incorporate teeth in their design. Because of this, they have the advantage of not slipping, but are expensive to manufacture and can be noisy.
+</li>
+</ul>
+
+
+<div class="figure">
+<p><img src="./img/gears.png" alt="gears.png" />
+</p>
+</div>
+
+<ul class="org-ul">
+<li>Gears are used for a multitude of different applications. They can be seen in cars, microwave ovens, lifts, automated doors, children’s toys, desktop fans and many other places. There are several different types of gear terminology you will need to know about for the exam. In the picture above, the gear on the left (if it were connected to a motor) would be referred to as the <b>driver</b> gear. The one on the far right would be the <b>driven</b> gear, and the ones in the middle are referred to as <b>idler</b> gears. The main definitions you need to know are:
+<ul class="org-ul">
+<li><b>Gear:</b> A toothed wheel of varying diameter.
+</li>
+<li><b>Simple gear train:</b> Two gears meshed together.
+</li>
+<li><b>Compound gear train:</b> More than two gears meshed together.
+</li>
+<li><b>Gear ratio:</b> The ratio between a driver gear and its driven gear.
+</li>
+<li><b>Idler gear:</b> A gear inserted between two or more other gear wheels.
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2" class="outline-3 learn">
+<h3 id="sec-2-2">Other Gear Configurations</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li><b>Worm drive:</b> A worm drive (image shown to the right) is a non-slip gearing system for transmitting higher torque at lower speeds.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/worm.png" alt="worm.png" />
+</p>
+</div>
+
+<ul class="org-ul">
+<li><b>Rack and Pinion gear:</b> Used to convert rotary motion to linear motion, as seen in steering systems on cars, and mountain railways.
+</li>
+
+<li><b>Bevel gear:</b> Gears which allow transmission of drive through 90º. 
+</li>
+</ul>
+<p>
+<img src="./img/bevel.png" alt="bevel.png" />
+Systems will often require that motion to be transferred from one place to another; this can be achieved with linkages (which are discussed below) or by using either belts or chains. 
+</p>
+
+<p>
+<i><i>Tip:</i></i> You may find this site helpful, as well as pages 66 and 69 of the textbook.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2-3" class="outline-3 learn">
+<h3 id="sec-2-3">Belts and Pulleys</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li><a href="http://en.wikipedia.org/wiki/Pulley#Belt_and_pulley_systems">Belts and pulleys</a> are one of the oldest ways to transmit drive, and can be seen on Victorian steam engines, car engines and tools such as lathes and drills. While they are excellent for covering distances between pulleys, they are susceptible to slipping in wet conditions, and the belts can stretch (<i>and break</i>) over time. 
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Sprocket">Chains and sprockets</a> are a non-slip alternative. 
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-2-4" class="outline-3 learn">
+<h3 id="sec-2-4">Tribology (Friction)</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li>Friction is a force resisting motion, which generates heat. In engineering, friction can either be advantageous or disadvantageous, depending upon the situation. 
+</li>
+
+<li>In a car’s brakes, friction is used to stop a car, by pads being pushed tightly against the inside of the wheel to generate friction and prevent the wheels from turning (by transferring kinetic energy into heat). 
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/disc_brakes.png" alt="disc_brakes.png" />
+</p>
+</div>
+
+<ul class="org-ul">
+<li>In a car engine, or its gearbox, friction between two metal gears as they rub together causes the parts to wear, unwanted heat to be generated  and reduces the efficiency of the engine – this friction can be reduced by using a lubricant (such as engine oil). In electronics, nylon gears are both tough and self-lubricating, and so are an ideal choice for small projects. 
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-2-5" class="outline-3 learn">
+<h3 id="sec-2-5">Mechanical Advantage</h3>
+<div class="outline-text-3" id="text-2-5">
+<ul class="org-ul">
+<li>When a mechanism such as a lever improves the effect of an effort, the mechanism is said to have provided a Mechanical Advantage (MA). To work out what this is, the following formula can be used: MA = LOAD ÷ EFFORT
+</li>
+</ul>
+
+<p>
+<b>Task:</b> One example of a mechanical system are levers. Identify the three different classes of levers, create a diagram for each (indicating the location of the load, effort and fulcrum), and give an example of where each can be seen in real life. 
+</p>
+
+<p>
+<i>Tip:</i> You may find <a href="http://en.wikipedia.org/wiki/Linkage_(mechanical)">this</a> page of some use, as well as pages 64-65 of the text book. 
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2 activity">
+<h2 id="sec-3"><span class="section-number-2">3</span> Recap</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-sec-3-1" class="outline-3 try">
+<h3 id="sec-3-1">Past Paper Questions</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+<b>June 2007, Q1(f)</b> A Double Pole Double Throw (DPDT) switch can be used to control the forward and reverse direction of a motor. Complete the diagram below to show a reversing circuit. Marks will be awarded for: 
+Power supply connected to switch. <i>(2 marks)</i>
+Switch connected to the motor.  <i>(4 marks)</i>
+<img src="./img/2007_q1f.png" alt="2007_q1f.png" />
+</p>
+
+<p>
+<b>June 2010, Q6.(b)</b> A system is to be developed to automatically open and close a set of curtains at regular time intervals. The curtains weigh 10 kg and the motor is connected directly to them with a belt. The motor rotates too fast and cannot move the curtains. Identify two problems with the drive system and suggest two possible modifications that could be made so that the existing motor can be used.
+Problem 1:
+Modification 1:
+Problem 2: 
+Modification 2: <i>(4 marks)</i>
+</p>
+
+<p>
+<b>6(c)(i)</b> Discuss the impact on the environment of using electrically powered curtains. <i>(3 marks)</i>
+<b>(c) (ii)</b> Suggest two environmentally friendly sources of mains electricity. <i>(2 marks)</i>
+<b>6 (c) (iii)</b> Give three advantages of environmentally friendly energy sources. <i>(3 marks)</i>
+</p>
+
+<p>
+<b>June 2011, Q3.</b> You should spend about 20 minutes on this question. This question is about drive systems.
+</p>
+
+<p>
+<b>3(a)</b> On each of the following diagrams, sketch and label suitable drive systems to connect the shafts. Make sure that the shafts rotate in the correct direction and at the correct speed. In each case name the drive system used.
+</p>
+
+<p>
+<b>3 (a)(i)</b> Two shafts rotating in close proximity, in opposite directions, at the same speed. <i>(3 marks)</i>
+<img src="./img/2011_q3ai.png" alt="2011_q3ai.png" />
+<b>(a)(ii)</b> Name the drive system used. <i>(1 mark)</i>
+</p>
+
+<p>
+<b>(a)(iii)</b> Two shafts rotating a distance apart, in the same direction, at the same speed <i>(3 marks)</i>
+<img src="./img/2011_q3aii.png" alt="2011_q3aii.png" />
+<b>3(a)(iv)</b> Name the drive system used. <i>(1 mark)</i>
+</p>
+
+<p>
+<b>(a)(v)</b> Two shafts rotating in close proximity, in opposite directions, at different speeds <i>(3 marks)</i>
+<img src="./img/2011_q3av.png" alt="2011_q3av.png" />
+<b>(a)(vi)</b> Name the drive system used. <i>(1 mark)</i>
+</p>
+
+<p>
+<b>(a)(vii)</b> Two shafts rotating at 90° to each other, in opposite directions, at the same speed. <i>Note:</i> The shafts are drawn in 2D to simplify your sketch. <i>(3 marks)</i>
+<img src="./img/2011_q3avii.png" alt="2011_q3avii.png" />
+<b>3(a)(viii)</b> Name the drive system used. <i>(1 mark)</i>
+</p>
+
+<p>
+(b) Friction can be an advantage or a disadvantage.
+</p>
+
+<p>
+<b>3(b)(i)</b> Give an example and explain why friction can be an advantage in a drive system. <i>(2 marks)</i>
+</p>
+
+<p>
+<b>3(b)(ii)</b> Give an example and explain why friction can be a disadvantage in a drive system. <i>(2 marks)</i>
+</p>
+
+<p>
+<b>June 2013, Q2.</b> You are advised to spend about 20 minutes on this question. This question is about mechanical drive systems.
+</p>
+
+<p>
+<b>2(a)</b> Complete the following table.
+<img src="./img/2013_q2.png" alt="2013_q2.png" />
+Give an advantage and disadvantage of each type of drive system with an example of a product that uses the drive system. <i>(9 marks)</i>
+</p>
+
+<p>
+<b>2(b)</b> Friction can be an advantage or a disadvantage.
+Describe a system where friction is an advantage.
+Describe a system where friction is a disadvantage. <i>(2x2 marks)</i>
+</p>
+
+<p>
+<b>2(c)</b> Calculate the gear ratio of the gears below.
+<img src="./img/2013_q2c.png" alt="2013_q2c.png" />
+Formula:
+</p>
+
+<p>
+Calculation:
+</p>
+
+<p>
+Answer:
+</p>
+
+<p>
+<i>(3 marks)</i>
+</p>
+
+<p>
+<b>2(d)</b> Calculate the velocity ratio of the pulleys below.
+<img src="./img/2013_q2d.png" alt="2013_q2d.png" />
+Formula:
+</p>
+
+<p>
+Calculation:
+</p>
+
+<p>
+Answer: 
+</p>
+
+<p>
+<i>(3 marks)</i>
+</p>
+
+<p>
+<b>2(e)</b> Calculate the output speed of the pulley system above if the input speed is 1000 rpm.
+</p>
+
+<p>
+Formula:
+</p>
+
+<p>
+Calculation:
+</p>
+
+<p>
+Answer:
+</p>
+
+<p>
+<i>(3 marks)</i>
+</p>
+
+<p>
+<a href="index.html">Return to homepage</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="validation"></p>
+</div>
+</body>
+</html>

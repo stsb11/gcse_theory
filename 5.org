@@ -152,12 +152,13 @@ iii) Rotary to Reciprocating and
 
 iv) Oscillating to Rotary.
 
-Tip: You may find [[http://www.bbc.co.uk/schools/gcsebitesize/design/systemscontrol/][this]] site helpful, as well as pages 61 and 65 of the textbook.
+/Tip:/ You may find [[http://www.bbc.co.uk/schools/gcsebitesize/design/systemscontrol/][this]] site helpful, as well as pages 61 and 65 of the textbook.
 
 ** Past Paper Questions
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-
+*June 2012, Q3a*. Draw lines to link each motion description below to the correct arrow symbol. Then draw lines from each arrow symbol to the correct example at the bottom of the page.
+[[./img/2012_q3a.png]]
 
 [[file:index.html][Return to homepage]]

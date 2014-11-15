@@ -1,0 +1,264 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+BEGIN_COMMENT
+#+STYLE: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+STYLE: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+END_COMMENT
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil 
+#+TITLE: Drive Systems
+#+AUTHOR: Stephen Brown
+
+#+BEGIN_HTML
+<div class=ribbon>
+<a href="https://github.com/stsb11/gcse_theory">Fork me on GitHub</a>
+</div>
+<center>
+<img src='./img/gear.png' width=33%>
+</center>
+#+END_HTML
+
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+e* Introduction
+[[file:img/pic.jpg]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: intro
+:END:
+** What are PIC chips?
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+Peripheral Interface Controllers are small silicon chips which can be programmed to perform useful tasks.
+In school, we tend to use Genie branded chips, like the C08 model you will use in this project. Others (e.g. PICAXE) are available.
+PIC chips allow you connect different inputs (e.g. switches) and outputs (e.g. LEDs, motors and speakers), and to control them using flowcharts.
+Chips such as these can be found everywhere in consumer electronic products, from toasters to cars. 
+
+While they might not look like much, there is more computational power in a single PIC chip used in school than there was in the space shuttle that went to the moon in the 60's!
+** When would I use a PIC chip?
+Imagine you wanted to make a flashing bike light; using an LED and a switch alone, you'd need to manually push and release the button to get the flashing effect. A PIC chip could be programmed to turn the LED off and on once a second.
+In a board game, you might want to have an electronic dice to roll numbers from 1 to 6 for you. 
+In a car, a circuit is needed to ensure that the airbags only deploy when there is a sudden change in speed, AND the passenger is wearing their seatbelt, AND the front or rear bumper has been struck. PIC chips can carry out their instructions very quickly, performing around 1000 instructions per second - as such, they can react far more quickly than a person can. 
+* Introduction
+- With an understanding of the types of motion, we can start to look at different ways of using them to achieve different outcomes. All tools and machines are made up of mechanisms; a complicated machine is lots of mechanisms working together. Mechanisms are used to improve our own abilities, e.g. we can hit a nail harder with a hammer (a lever mechanism) than we can by hitting it with a stone held in the hand and we can move faster on a bicycle than by running.
+- All mechanisms are to do with movement and energy. Every mechanism can be split into three parts:
+
+
+- *Input* – the energy put in, e.g. the squeezing together of the handles of a pair of scissors.
+- *Process* – the movement of the mechanism, e.g. the movement of the scissors blades.
+- *Output* - the result of the process, e.g. cutting paper.
+
+- Many mechanisms change one type of movement to another.
+
+* Drive Systems
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Gears
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- [[http://en.wikipedia.org/wiki/Gear][Gears]] (/found in food mixers, cars, bicycles, etc/) incorporate teeth in their design. Because of this, they have the advantage of not slipping, but are expensive to manufacture and can be noisy.
+
+[[./img/gears.png]]
+
+- Gears are used for a multitude of different applications. They can be seen in cars, microwave ovens, lifts, automated doors, children’s toys, desktop fans and many other places. There are several different types of gear terminology you will need to know about for the exam. In the picture above, the gear on the left (if it were connected to a motor) would be referred to as the *driver* gear. The one on the far right would be the *driven* gear, and the ones in the middle are referred to as *idler* gears. The main definitions you need to know are:
+  - *Gear:* A toothed wheel of varying diameter.
+  - *Simple gear train:* Two gears meshed together.
+  - *Compound gear train:* More than two gears meshed together.
+  - *Gear ratio:* The ratio between a driver gear and its driven gear.
+  - *Idler gear:* A gear inserted between two or more other gear wheels.
+
+** Other Gear Configurations
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- *Worm drive:* A worm drive (image shown to the right) is a non-slip gearing system for transmitting higher torque at lower speeds.
+[[./img/worm.png]]
+
+- *Rack and Pinion gear:* Used to convert rotary motion to linear motion, as seen in steering systems on cars, and mountain railways.
+
+- *Bevel gear:* Gears which allow transmission of drive through 90º. 
+[[./img/bevel.png]]
+Systems will often require that motion to be transferred from one place to another; this can be achieved with linkages (which are discussed below) or by using either belts or chains. 
+
+//Tip:// You may find this site helpful, as well as pages 66 and 69 of the textbook.
+
+** Belts and Pulleys
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- [[http://en.wikipedia.org/wiki/Pulley#Belt_and_pulley_systems][Belts and pulleys]] are one of the oldest ways to transmit drive, and can be seen on Victorian steam engines, car engines and tools such as lathes and drills. While they are excellent for covering distances between pulleys, they are susceptible to slipping in wet conditions, and the belts can stretch (/and break/) over time. 
+- [[http://en.wikipedia.org/wiki/Sprocket][Chains and sprockets]] are a non-slip alternative. 
+** Tribology (Friction)
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Friction is a force resisting motion, which generates heat. In engineering, friction can either be advantageous or disadvantageous, depending upon the situation. 
+
+- In a car’s brakes, friction is used to stop a car, by pads being pushed tightly against the inside of the wheel to generate friction and prevent the wheels from turning (by transferring kinetic energy into heat). 
+[[./img/disc_brakes.png]]
+
+- In a car engine, or its gearbox, friction between two metal gears as they rub together causes the parts to wear, unwanted heat to be generated  and reduces the efficiency of the engine – this friction can be reduced by using a lubricant (such as engine oil). In electronics, nylon gears are both tough and self-lubricating, and so are an ideal choice for small projects. 
+
+** Mechanical Advantage
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- When a mechanism such as a lever improves the effect of an effort, the mechanism is said to have provided a Mechanical Advantage (MA). To work out what this is, the following formula can be used: MA = LOAD ÷ EFFORT
+
+*Task:* One example of a mechanical system are levers. Identify the three different classes of levers, create a diagram for each (indicating the location of the load, effort and fulcrum), and give an example of where each can be seen in real life. 
+
+/Tip:/ You may find [[http://en.wikipedia.org/wiki/Linkage_(mechanical)][this]] page of some use, as well as pages 64-65 of the text book. 
+* Recap
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Past Paper Questions
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+*June 2007, Q1(f)* A Double Pole Double Throw (DPDT) switch can be used to control the forward and reverse direction of a motor. Complete the diagram below to show a reversing circuit. Marks will be awarded for: 
+Power supply connected to switch. /(2 marks)/
+Switch connected to the motor.  /(4 marks)/
+[[./img/2007_q1f.png]]
+
+*June 2010, Q6.(b)* A system is to be developed to automatically open and close a set of curtains at regular time intervals. The curtains weigh 10 kg and the motor is connected directly to them with a belt. The motor rotates too fast and cannot move the curtains. Identify two problems with the drive system and suggest two possible modifications that could be made so that the existing motor can be used.
+Problem 1:
+Modification 1:
+Problem 2: 
+Modification 2: /(4 marks)/
+
+*6(c)(i)* Discuss the impact on the environment of using electrically powered curtains. /(3 marks)/
+*(c) (ii)* Suggest two environmentally friendly sources of mains electricity. /(2 marks)/
+*6 (c) (iii)* Give three advantages of environmentally friendly energy sources. /(3 marks)/
+
+*June 2011, Q3.* You should spend about 20 minutes on this question. This question is about drive systems.
+
+*3(a)* On each of the following diagrams, sketch and label suitable drive systems to connect the shafts. Make sure that the shafts rotate in the correct direction and at the correct speed. In each case name the drive system used.
+
+*3 (a)(i)* Two shafts rotating in close proximity, in opposite directions, at the same speed. /(3 marks)/
+[[./img/2011_q3ai.png]]
+*(a)(ii)* Name the drive system used. /(1 mark)/
+
+*(a)(iii)* Two shafts rotating a distance apart, in the same direction, at the same speed /(3 marks)/
+[[./img/2011_q3aii.png]]
+*3(a)(iv)* Name the drive system used. /(1 mark)/
+
+*(a)(v)* Two shafts rotating in close proximity, in opposite directions, at different speeds /(3 marks)/
+[[./img/2011_q3av.png]]
+*(a)(vi)* Name the drive system used. /(1 mark)/
+
+*(a)(vii)* Two shafts rotating at 90° to each other, in opposite directions, at the same speed. /Note:/ The shafts are drawn in 2D to simplify your sketch. /(3 marks)/
+[[./img/2011_q3avii.png]]
+*3(a)(viii)* Name the drive system used. /(1 mark)/
+
+(b) Friction can be an advantage or a disadvantage.
+
+*3(b)(i)* Give an example and explain why friction can be an advantage in a drive system. /(2 marks)/
+
+*3(b)(ii)* Give an example and explain why friction can be a disadvantage in a drive system. /(2 marks)/
+
+*June 2013, Q2.* You are advised to spend about 20 minutes on this question. This question is about mechanical drive systems.
+
+*2(a)* Complete the following table.
+[[./img/2013_q2.png]]
+Give an advantage and disadvantage of each type of drive system with an example of a product that uses the drive system. /(9 marks)/
+
+*2(b)* Friction can be an advantage or a disadvantage.
+Describe a system where friction is an advantage.
+Describe a system where friction is a disadvantage. /(2x2 marks)/
+
+*2(c)* Calculate the gear ratio of the gears below.
+[[./img/2013_q2c.png]]
+Formula:
+
+Calculation:
+
+Answer:
+
+/(3 marks)/
+
+*2(d)* Calculate the velocity ratio of the pulleys below.
+[[./img/2013_q2d.png]]
+Formula:
+
+Calculation:
+
+Answer: 
+
+/(3 marks)/
+
+*2(e)* Calculate the output speed of the pulley system above if the input speed is 1000 rpm.
+
+Formula:
+
+Calculation:
+
+Answer:
+
+/(3 marks)/
+
+[[file:index.html][Return to homepage]]
