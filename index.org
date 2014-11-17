@@ -80,7 +80,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-* [[./exmaples.html][Model Past Paper solutions]]
+* [[./examples.html][Model Past Paper solutions]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:

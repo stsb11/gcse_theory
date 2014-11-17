@@ -1,0 +1,40 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+BEGIN_COMMENT
+#+STYLE: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+STYLE: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+END_COMMENT
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil 
+
+#+TITLE: GCSE Past Paper solutions
+#+AUTHOR: Stephen Brown
+#+OPTIONS: toc:nil f:nil author:nil num:nil creator:nil timestamp:nil 
+
+#+BEGIN_HTML
+<div class=ribbon>
+<a href="https://github.com/stsb11/gcse_theory">Fork me on GitHub</a>
+</div>
+#+END_HTML
+* [[file:examples/2009.docx][June 2009 Paper]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+* [[file:examples/2010.docx][June 2010 Paper]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+* [[file:examples/2011.docx][June 2011 Paper]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+* [[./examples/2012.docx][June 2012 Paper]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+* [[file:examples/2013.docx][June 2013 Paper]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+
+- [[./index.html][Return to homepage]]
