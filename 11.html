@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Circuit Design and Manufacture</title>
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Circuit Design and Manufacture</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Designing a Circuit</a>
+<ul>
+<li><a href="#sec-1-1">Software Simulation</a></li>
+<li><a href="#sec-1-2">Breadboarding</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2. Manufacturing a permanent circuit</a>
+<ul>
+<li><a href="#sec-2-1">Chemical Etching</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3. Testing a Circuit</a>
+<ul>
+<li><a href="#sec-3-1">Techniques</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4. Recap</a>
+<ul>
+<li><a href="#sec-4-1">Past Paper Questions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class=ribbon>
+<a href="https://github.com/stsb11/gcse_theory">Fork me on GitHub</a>
+</div>
+<center>
+<img src='./img/etch_tank.jpg' width=50%>
+</center>
+
+<div id="outline-container-sec-1" class="outline-2 activity">
+<h2 id="sec-1"><span class="section-number-2">1</span> Designing a Circuit</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Prior to manufacturing, engineers need to design and test their circuit ideas to ensure they work correctly. 
+</li>
+</ul>
+</div>
+<div id="outline-container-sec-1-1" class="outline-3 learn">
+<h3 id="sec-1-1">Software Simulation</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>By modelling a circuit in software (we use Circuit Wizard), the design can be quickly changed, and components swapped in and out. This has the advantages that no real-world components are needed, that when components blow they can be reset rather than needing costly replacement, simulations often show the flow of current in the circuit to help with design. Designing PCBs on a computer also allows for changes to be made without having to re-draw an entire artwork by hand. 
+</li>
+<li>The disadvantages are that the simulation is only as good as the software, so what works on the computer doesn’t always work in real life. Additionally, software can be very expensive. 
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3 learn">
+<h3 id="sec-1-2">Breadboarding</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>By creating a physical representation of a circuit on a breadboard with actual components, an engineer can model a circuit prior to manufacturing it. The breadboard advantages are that because they are not soldered into place, components can be quickly swapped in and out, and that if a circuit works on a breadboard, the engineer can be confident it will work when manufactured. 
+</li>
+<li>The disadvantages are that wires can come out of the holes, when components fail they need to be thrown away, breadboards can become very densely populated and hard to read, and breadboarding requires the engineer to have all actual the components for their product, making experimentation hard if they want to try a new idea.
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2 activity">
+<h2 id="sec-2"><span class="section-number-2">2</span> Manufacturing a permanent circuit</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-sec-2-1" class="outline-3 try">
+<h3 id="sec-2-1">Chemical Etching</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>Etching PCB’s (<i>Printed Circuit Boards</i>) is one way to create a permanent circuit. Two alternatives would be to use stripboard, or alternatively using a milling machine to channel out tracks into copper board; both of these are better for the environment than using chemicals like we do in school. Using a PCB has the advantage of having a small physical footprint (i.e. being smaller than stripboard), and as it is permanent, will produce a reliable and long-lasting product when finished.
+</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>To manufacture a PCB using an etch-tank, the steps are:
+<ul class="org-ul">
+<li>Print the PCB artwork onto transparency paper.
+</li>
+<li>Trim a piece of photo-board to the correct size, peel off the protective layer, and place the artwork and board in the UV light box for three minutes to soften the photo-resist layer on the board.
+</li>
+<li>Wearing an apron, gloves and goggles, place the exposed PCB into the pre-heated developer tank for around 30s to remove the softened photo-resist layer from the PCB. Wash the PCB under the tap once done, and visually inspect.
+</li>
+<li>Put the PCB into the pre-heated etchant tank, and turn on the bubbles to accelerate the etching process for around 5 minutes. 
+</li>
+<li>Once all the unwanted copper has been removed, wash and dry the PCB. Perform a visual inspection to ensure the process is complete.
+</li>
+<li>Drill holes, trim precisely to size and use a resist stripper. 
+</li>
+<li>Finally, the board can be placed in a tinning solution if it not to be etched immediately. 
+</li>
+</ul>
+</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Using an etch-tank has many advantages:
+<ul class="org-ul">
+<li>The PCB can be designed very efficiently, so the size will be small.
+</li>
+<li>Labels or a silkscreen can be added to make soldering easier.
+</li>
+<li>Debugging the circuit is easier, as tracks can be easily followed
+</li>
+<li>Once designed, a PCB can be easily etched over and over again.
+</li>
+</ul>
+</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>There are a number of disadvantages, though:
+<ul class="org-ul">
+<li>An etch tank costs several hundred pounds, and the chemicals go stale over time, and will need replenishing.
+</li>
+<li>The chemicals need to be disposed of correctly.
+</li>
+<li>The process is messy.
+</li>
+<li>Photoboard is expensive compared to strip-board.
+</li>
+<li>Designing a PCB requires a degree of skill and experience to reduce the board-size. Creating designs is a time-consuming task.
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2 activity">
+<h2 id="sec-3"><span class="section-number-2">3</span> Testing a Circuit</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>Once a PCB (or breadboard) has been built, there are several ways to test the board, or find faults in it.
+</li>
+</ul>
+</div>
+<div id="outline-container-sec-3-1" class="outline-3 try">
+<h3 id="sec-3-1">Techniques</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>A <b>Multimeter</b> is a multi-purpose instrument which can be used in a variety of ways:
+<ul class="org-ul">
+<li>a. <b>Continuity</b> can test whether two PCB tracks in close proximity are touching or not, whether a ground pin has a connection to the negative end of a battery, whether both drilled ends of a track are connected or not or whether a soldered point has failed.
+</li>
+<li>b. <b>DC Voltage</b> can test that components such as PIC chips and 555 timers have a potential difference, when the circuit is energised.
+</li>
+<li>c. <b>Resistance</b> can be used to test that individual resistors in the circuit are working correctly. 
+</li>
+</ul>
+</li>
+<li>A <b>visual inspection</b> of a PCB will show whether all the tracks have etched correctly, that all the holes have been drilled centrally on the pads, that the PCB hasn’t been over-trimmed to chop off any tracks, that polarised components (e.g. LEDs, electrolytic capacitors) are correctly oriented and that any ICs (e.g. 555 timer chips) have been inserted the correct way around.
+</li>
+<li>Once the above have been completed, the circuit can be <b>energised briefly</b> while ICs and voltage regulators are checked for over-heating (a symptom of short circuits). 
+</li>
+<li>Once the circuit is built, an <b><a href="http://en.wikipedia.org/wiki/Oscilloscope">oscilloscope</a></b> can be used on output pins to show voltage levels over time on its output screen (e.g. to see the output on an astable 555 timer chip going high-low). 
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-4" class="outline-2 activity">
+<h2 id="sec-4"><span class="section-number-2">4</span> Recap</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-sec-4-1" class="outline-3 try">
+<h3 id="sec-4-1">Past Paper Questions</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li><b>June 2010, Q4.</b> You are advised to spend about 30 minutes on this question. This question is about Printed Circuit Board (PCB) design and construction.
+</li>
+
+<li>(a) It is best to test that a circuit works before building a PCB. Describe one method of testing a circuit before building a PCB. (3 marks)
+</li>
+<li>(b) The circuit below pulses the speaker. 
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/2010_q4b1.png" alt="2010_q4b1.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Complete the missing five PCB tracks on Figure 2 for the circuit in Figure 1. The pads and some of the tracks have been completed for you. Your tracks should not cross at any point and should be drawn neatly.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/2010_q4b2.png" alt="2010_q4b2.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>(c) Give two advantages of using Computer Aided Design (<i>CAD</i>) to design PCBs. <i>(4 marks)</i>
+</li>
+<li>(d) (i) List four main stages in a PCB production process. <i>(4 marks)</i>
+</li>
+<li>(d) (ii) Describe in detail the PCB production process outlined in part (d) (i). <i>(8 marks)</i>
+</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>June 2012, Q5c.</b> The control system for a coffee vending machine is running on a PIC (microcontroller). On the diagram below, show the connections between the PIC and the component that operates the hot water valve (component A). 
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/2012_q5c.png" alt="2012_q5c.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>You should also name any other components used.      <i>(4 marks)</i>
+</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>June 2012, Q7.</b> You are advised to spend about 15 minutes on this question. This question is about fault finding on printed circuit boards. 
+</li>
+<li>(a) Tick the box below the joint that has been correctly soldered.        <i>(1 mark)</i>
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/2012_q7a.png" alt="2012_q7a.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>(b) Name two different types of electronic test equipment. <i>(2 marks)</i>
+</li>
+<li>7 (c) Describe how to find faults in a printed circuit board. <i>(8 marks)</i>
+</li>
+</ul>
+
+<p>
+<a href="index.html">Return to homepage</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="validation"></p>
+</div>
+</body>
+</html>

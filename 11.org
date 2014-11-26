@@ -1,0 +1,205 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+BEGIN_COMMENT
+#+STYLE: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+STYLE: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+END_COMMENT
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil 
+#+TITLE: Circuit Design and Manufacture
+#+AUTHOR: Stephen Brown
+
+#+BEGIN_HTML
+<div class=ribbon>
+<a href="https://github.com/stsb11/gcse_theory">Fork me on GitHub</a>
+</div>
+<center>
+<img src='./img/etch_tank.jpg' width=50%>
+</center>
+#+END_HTML
+
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+e* Introduction
+[[file:img/pic.jpg]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: intro
+:END:
+** What are PIC chips?
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+Peripheral Interface Controllers are small silicon chips which can be programmed to perform useful tasks.
+In school, we tend to use Genie branded chips, like the C08 model you will use in this project. Others (e.g. PICAXE) are available.
+PIC chips allow you connect different inputs (e.g. switches) and outputs (e.g. LEDs, motors and speakers), and to control them using flowcharts.
+Chips such as these can be found everywhere in consumer electronic products, from toasters to cars. 
+
+While they might not look like much, there is more computational power in a single PIC chip used in school than there was in the space shuttle that went to the moon in the 60's!
+** When would I use a PIC chip?
+Imagine you wanted to make a flashing bike light; using an LED and a switch alone, you'd need to manually push and release the button to get the flashing effect. A PIC chip could be programmed to turn the LED off and on once a second.
+In a board game, you might want to have an electronic dice to roll numbers from 1 to 6 for you. 
+In a car, a circuit is needed to ensure that the airbags only deploy when there is a sudden change in speed, AND the passenger is wearing their seatbelt, AND the front or rear bumper has been struck. PIC chips can carry out their instructions very quickly, performing around 1000 instructions per second - as such, they can react far more quickly than a person can. 
+* Designing a Circuit
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+- Prior to manufacturing, engineers need to design and test their circuit ideas to ensure they work correctly. 
+** Software Simulation
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- By modelling a circuit in software (we use Circuit Wizard), the design can be quickly changed, and components swapped in and out. This has the advantages that no real-world components are needed, that when components blow they can be reset rather than needing costly replacement, simulations often show the flow of current in the circuit to help with design. Designing PCBs on a computer also allows for changes to be made without having to re-draw an entire artwork by hand. 
+- The disadvantages are that the simulation is only as good as the software, so what works on the computer doesn’t always work in real life. Additionally, software can be very expensive. 
+** Breadboarding
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- By creating a physical representation of a circuit on a breadboard with actual components, an engineer can model a circuit prior to manufacturing it. The breadboard advantages are that because they are not soldered into place, components can be quickly swapped in and out, and that if a circuit works on a breadboard, the engineer can be confident it will work when manufactured. 
+- The disadvantages are that wires can come out of the holes, when components fail they need to be thrown away, breadboards can become very densely populated and hard to read, and breadboarding requires the engineer to have all actual the components for their product, making experimentation hard if they want to try a new idea.
+* Manufacturing a permanent circuit
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Chemical Etching
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- Etching PCB’s (/Printed Circuit Boards/) is one way to create a permanent circuit. Two alternatives would be to use stripboard, or alternatively using a milling machine to channel out tracks into copper board; both of these are better for the environment than using chemicals like we do in school. Using a PCB has the advantage of having a small physical footprint (i.e. being smaller than stripboard), and as it is permanent, will produce a reliable and long-lasting product when finished.
+
+
+- To manufacture a PCB using an etch-tank, the steps are:
+    - Print the PCB artwork onto transparency paper.
+    - Trim a piece of photo-board to the correct size, peel off the protective layer, and place the artwork and board in the UV light box for three minutes to soften the photo-resist layer on the board.
+    -  Wearing an apron, gloves and goggles, place the exposed PCB into the pre-heated developer tank for around 30s to remove the softened photo-resist layer from the PCB. Wash the PCB under the tap once done, and visually inspect.
+    -  Put the PCB into the pre-heated etchant tank, and turn on the bubbles to accelerate the etching process for around 5 minutes. 
+    -  Once all the unwanted copper has been removed, wash and dry the PCB. Perform a visual inspection to ensure the process is complete.
+    -  Drill holes, trim precisely to size and use a resist stripper. 
+    -  Finally, the board can be placed in a tinning solution if it not to be etched immediately. 
+
+
+- Using an etch-tank has many advantages:
+    - The PCB can be designed very efficiently, so the size will be small.
+    - Labels or a silkscreen can be added to make soldering easier.
+    - Debugging the circuit is easier, as tracks can be easily followed
+    - Once designed, a PCB can be easily etched over and over again.
+
+
+- There are a number of disadvantages, though:
+    - An etch tank costs several hundred pounds, and the chemicals go stale over time, and will need replenishing.
+    - The chemicals need to be disposed of correctly.
+    - The process is messy.
+    - Photoboard is expensive compared to strip-board.
+    - Designing a PCB requires a degree of skill and experience to reduce the board-size. Creating designs is a time-consuming task.
+
+* Testing a Circuit
+- Once a PCB (or breadboard) has been built, there are several ways to test the board, or find faults in it.
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Techniques
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- A *Multimeter* is a multi-purpose instrument which can be used in a variety of ways:
+    - a. *Continuity* can test whether two PCB tracks in close proximity are touching or not, whether a ground pin has a connection to the negative end of a battery, whether both drilled ends of a track are connected or not or whether a soldered point has failed.
+    - b. *DC Voltage* can test that components such as PIC chips and 555 timers have a potential difference, when the circuit is energised.
+    - c. *Resistance* can be used to test that individual resistors in the circuit are working correctly. 
+- A *visual inspection* of a PCB will show whether all the tracks have etched correctly, that all the holes have been drilled centrally on the pads, that the PCB hasn’t been over-trimmed to chop off any tracks, that polarised components (e.g. LEDs, electrolytic capacitors) are correctly oriented and that any ICs (e.g. 555 timer chips) have been inserted the correct way around.
+- Once the above have been completed, the circuit can be *energised briefly* while ICs and voltage regulators are checked for over-heating (a symptom of short circuits). 
+- Once the circuit is built, an *[[http://en.wikipedia.org/wiki/Oscilloscope][oscilloscope]]* can be used on output pins to show voltage levels over time on its output screen (e.g. to see the output on an astable 555 timer chip going high-low). 
+
+
+* Recap
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Past Paper Questions
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- *June 2010, Q4.* You are advised to spend about 30 minutes on this question. This question is about Printed Circuit Board (PCB) design and construction.
+
+- (a) It is best to test that a circuit works before building a PCB. Describe one method of testing a circuit before building a PCB. (3 marks)
+- (b) The circuit below pulses the speaker. 
+[[./img/2010_q4b1.png]]
+- Complete the missing five PCB tracks on Figure 2 for the circuit in Figure 1. The pads and some of the tracks have been completed for you. Your tracks should not cross at any point and should be drawn neatly.
+[[./img/2010_q4b2.png]]
+- (c) Give two advantages of using Computer Aided Design (/CAD/) to design PCBs. /(4 marks)/
+- (d) (i) List four main stages in a PCB production process. /(4 marks)/
+- (d) (ii) Describe in detail the PCB production process outlined in part (d) (i). /(8 marks)/
+
+
+- *June 2012, Q5c.* The control system for a coffee vending machine is running on a PIC (microcontroller). On the diagram below, show the connections between the PIC and the component that operates the hot water valve (component A). 
+[[./img/2012_q5c.png]]
+- You should also name any other components used.      /(4 marks)/
+
+
+- *June 2012, Q7.* You are advised to spend about 15 minutes on this question. This question is about fault finding on printed circuit boards. 
+- (a) Tick the box below the joint that has been correctly soldered.	/(1 mark)/
+[[./img/2012_q7a.png]]
+- (b) Name two different types of electronic test equipment. /(2 marks)/
+- 7 (c) Describe how to find faults in a printed circuit board. /(8 marks)/
+
+[[file:index.html][Return to homepage]]
