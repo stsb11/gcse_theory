@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>System Block Diagrams</title>
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">System Block Diagrams</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Introduction</a>
+<ul>
+<li><a href="#sec-1-1">Basic Diagrams</a></li>
+<li><a href="#sec-1-2">Advanced System Block Diagrams</a></li>
+<li><a href="#sec-1-3">You try</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2. Recap</a>
+<ul>
+<li><a href="#sec-2-1">Past Paper Questions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class=ribbon>
+<a href="https://github.com/stsb11/gcse_theory">Fork me on GitHub</a>
+</div>
+<center>
+<img src='./img/sys_block_blank.png' width=50%>
+</center>
+
+<div id="outline-container-sec-1" class="outline-2 activity">
+<h2 id="sec-1"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>When producing the design for your coursework project (or considering a solution to an exam question), you may find it useful to produce a system block diagram to articulate the interaction between the different component parts of your product. 
+</li>
+</ul>
+</div>
+<div id="outline-container-sec-1-1" class="outline-3 learn">
+<h3 id="sec-1-1">Basic Diagrams</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>a simple example would be to consider a PIC powered LED floodlight, which comes on automatically when it gets dark. We could express this idea as follows:
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/sys_block.png" alt="sys_block.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Each box contains a component part of the system that will eventually be created, and the flow-lines represent the flow of information between the components. This way, a non-expert could understand the way in which the parts interact with one another. 
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3 learn">
+<h3 id="sec-1-2">Advanced System Block Diagrams</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+A more complex idea might be as shown below:
+<img src="./img/sys_block_adv.png" alt="sys_block_adv.png" />
+</p>
+<ul class="org-ul">
+<li>This example represents the drawer alarm project, which you made in year 9. Here, the PTM swich and LDR feed signals into the PIC, and the PIC in turn activates the LED. The PIC also activates the transistor, which in turn drives the siren (<i>as a PIC can’t carry enough current to power a siren by itself</i>).
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-3" class="outline-3 try">
+<h3 id="sec-1-3">You try</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Draw System block diagrams to demonstrate: -
+</p>
+
+<ul class="org-ul">
+<li>A lift being called from the floor above by a button
+</li>
+<li>A servo-operated robotic arm being moved by someone turning a potentiometer. 
+</li>
+<li>A house alarm, with an alarm bell driven by motion and pressure sensor
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2 activity">
+<h2 id="sec-2"><span class="section-number-2">2</span> Recap</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-sec-2-1" class="outline-3 try">
+<h3 id="sec-2-1">Past Paper Questions</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li><b>June 2007, Q4.</b> This question is about a system for remotely changing the points on an outdoor model railway. The photograph below shows a railway junction in a park. The points are used to change the route of the trains. 
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/2007_q4a.png" alt="2007_q4a.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>The sketch below shows a plan of the points. They are currently changed manually by moving this lever.
+</li>
+</ul>
+<p>
+<img src="./img/2007_q4a1.png" alt="2007_q4a1.png" />
+(a) Draw a system block diagram to operate the point from 10 metres away.
+<img src="./img/sys_block_blank.png" alt="sys_block_blank.png" />
+(b) Explain how your system would operate the points from 10 metres away. 
+<i>(2 marks)</i>
+</p>
+
+<p>
+(c) In the box below draw your system OUTPUT from part (a) that will operate the points by moving the link 10 mm.
+Attach your system to the link shown in the box below. Marks will be awarded as follows:
+</p>
+<ul class="org-ul">
+<li>a suitable system able to operate the points <i>(3 marks)</i>
+</li>
+<li>a suitable method of mounting your device to the base <i>(1 mark)</i>
+</li>
+<li>a suitable power source. <i>(1 mark)</i>
+</li>
+</ul>
+<p>
+<img src="./img/2007_q4c.png" alt="2007_q4c.png" />
+(d) Draw your system INPUT from part (a) in the box below. Marks will be awarded as follows: -
+</p>
+<ul class="org-ul">
+<li>a suitable INPUT device able to operate the points <i>(3 marks)</i>
+</li>
+<li>a suitable mounting of the device to the base. <i>(1 mark)</i>
+</li>
+</ul>
+<p>
+<img src="./img/2007_q4d.png" alt="2007_q4d.png" />
+(e) Using notes and sketches explain how a sensor could be used to sense the train at a certain location on the track. Marks will be awarded as follows:
+</p>
+<ul class="org-ul">
+<li>a suitable sensor able to sense the train <i>(3 marks)</i>
+</li>
+<li>a suitable method of mounting the sensor to the track. <i>(2 marks)</i>
+</li>
+
+<li><b>June 2010, Q3b.</b> In the system diagram below, write the names of components that could make a system that indicates a change in temperature.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/sys_block_blank.png" alt="sys_block_blank.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li><b>June 2010, Q6.</b> You are advised to spend about 15 minutes on this question. This question is about the analysis and evaluation of an existing product. The product is an automatic curtain closing and opening system.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/2010_q6a.png" alt="2010_q6a.png" />
+</p>
+</div>
+
+<ul class="org-ul">
+<li>6 (a) The proposed solution is shown below as a block diagram.
+</li>
+
+<li>This solution does not control the curtains correctly. Identify two possible problems with this proposal and state how each problem could be solved.
+<ul class="org-ul">
+<li>Problem 1: 
+</li>
+<li>Solution 1:
+</li>
+<li>Problem 2:
+</li>
+<li>Solution 2: <i>(6 marks)</i>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>June 2011, Q1e.</b> (i) The light should come ON when either door is opened, stay on for 10 seconds and then turn OFF. Design a system block diagram to show this.        <i>(5 marks)</i>
+</li>
+
+<li>(ii) Describe three extra user features that could be added to this simple system. <i>(3 marks)</i>
+</li>
+</ul>
+
+<p>
+<a href="index.html">Return to homepage</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="validation"></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,181 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+BEGIN_COMMENT
+#+STYLE: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+STYLE: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+END_COMMENT
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil 
+#+TITLE: System Block Diagrams
+#+AUTHOR: Stephen Brown
+
+#+BEGIN_HTML
+<div class=ribbon>
+<a href="https://github.com/stsb11/gcse_theory">Fork me on GitHub</a>
+</div>
+<center>
+<img src='./img/sys_block_blank.png' width=50%>
+</center>
+#+END_HTML
+
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+e* Introduction
+[[file:img/pic.jpg]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: intro
+:END:
+** What are PIC chips?
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+Peripheral Interface Controllers are small silicon chips which can be programmed to perform useful tasks.
+In school, we tend to use Genie branded chips, like the C08 model you will use in this project. Others (e.g. PICAXE) are available.
+PIC chips allow you connect different inputs (e.g. switches) and outputs (e.g. LEDs, motors and speakers), and to control them using flowcharts.
+Chips such as these can be found everywhere in consumer electronic products, from toasters to cars. 
+
+While they might not look like much, there is more computational power in a single PIC chip used in school than there was in the space shuttle that went to the moon in the 60's!
+** When would I use a PIC chip?
+Imagine you wanted to make a flashing bike light; using an LED and a switch alone, you'd need to manually push and release the button to get the flashing effect. A PIC chip could be programmed to turn the LED off and on once a second.
+In a board game, you might want to have an electronic dice to roll numbers from 1 to 6 for you. 
+In a car, a circuit is needed to ensure that the airbags only deploy when there is a sudden change in speed, AND the passenger is wearing their seatbelt, AND the front or rear bumper has been struck. PIC chips can carry out their instructions very quickly, performing around 1000 instructions per second - as such, they can react far more quickly than a person can. 
+* Introduction
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+- When producing the design for your coursework project (or considering a solution to an exam question), you may find it useful to produce a system block diagram to articulate the interaction between the different component parts of your product. 
+** Basic Diagrams
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- a simple example would be to consider a PIC powered LED floodlight, which comes on automatically when it gets dark. We could express this idea as follows:
+[[./img/sys_block.png]]
+- Each box contains a component part of the system that will eventually be created, and the flow-lines represent the flow of information between the components. This way, a non-expert could understand the way in which the parts interact with one another. 
+** Advanced System Block Diagrams
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+A more complex idea might be as shown below:
+[[./img/sys_block_adv.png]]
+- This example represents the drawer alarm project, which you made in year 9. Here, the PTM swich and LDR feed signals into the PIC, and the PIC in turn activates the LED. The PIC also activates the transistor, which in turn drives the siren (/as a PIC can’t carry enough current to power a siren by itself/).
+** You try
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+Draw System block diagrams to demonstrate: -
+
+- A lift being called from the floor above by a button
+- A servo-operated robotic arm being moved by someone turning a potentiometer. 
+- A house alarm, with an alarm bell driven by motion and pressure sensor
+* Recap
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Past Paper Questions
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- *June 2007, Q4.* This question is about a system for remotely changing the points on an outdoor model railway. The photograph below shows a railway junction in a park. The points are used to change the route of the trains. 
+[[./img/2007_q4a.png]]
+- The sketch below shows a plan of the points. They are currently changed manually by moving this lever.
+[[./img/2007_q4a1.png]]
+(a) Draw a system block diagram to operate the point from 10 metres away.
+[[./img/sys_block_blank.png]]
+(b) Explain how your system would operate the points from 10 metres away. 
+/(2 marks)/
+
+(c) In the box below draw your system OUTPUT from part (a) that will operate the points by moving the link 10 mm.
+Attach your system to the link shown in the box below. Marks will be awarded as follows:
+- a suitable system able to operate the points /(3 marks)/
+- a suitable method of mounting your device to the base /(1 mark)/
+- a suitable power source. /(1 mark)/
+[[./img/2007_q4c.png]]
+(d) Draw your system INPUT from part (a) in the box below. Marks will be awarded as follows: -
+- a suitable INPUT device able to operate the points /(3 marks)/
+- a suitable mounting of the device to the base. /(1 mark)/
+[[./img/2007_q4d.png]]
+(e) Using notes and sketches explain how a sensor could be used to sense the train at a certain location on the track. Marks will be awarded as follows:
+- a suitable sensor able to sense the train /(3 marks)/
+- a suitable method of mounting the sensor to the track. /(2 marks)/
+
+- *June 2010, Q3b.* In the system diagram below, write the names of components that could make a system that indicates a change in temperature.
+[[./img/sys_block_blank.png]]
+- *June 2010, Q6.* You are advised to spend about 15 minutes on this question. This question is about the analysis and evaluation of an existing product. The product is an automatic curtain closing and opening system.
+[[./img/2010_q6a.png]]
+
+- 6 (a) The proposed solution is shown below as a block diagram.
+
+- This solution does not control the curtains correctly. Identify two possible problems with this proposal and state how each problem could be solved.
+    - Problem 1: 
+    - Solution 1:
+    - Problem 2:
+    - Solution 2: /(6 marks)/
+
+
+- *June 2011, Q1e.* (i) The light should come ON when either door is opened, stay on for 10 seconds and then turn OFF. Design a system block diagram to show this.	/(5 marks)/
+
+- (ii) Describe three extra user features that could be added to this simple system. /(3 marks)/
+
+[[file:index.html][Return to homepage]]
