@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>System Design</title>
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">System Design</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Introduction</a></li>
+<li><a href="#sec-2">2. Recap</a>
+<ul>
+<li><a href="#sec-2-1">Past Paper Questions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class=ribbon>
+<a href="https://github.com/stsb11/gcse_theory">Fork me on GitHub</a>
+</div>
+<center>
+<img src='./img/etch_tank.jpg' width=50%>
+</center>
+
+<div id="outline-container-sec-1" class="outline-2 activity">
+<h2 id="sec-1"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>The single most important skill of an engineer is to be able to design solutions to new problems, applying their knowledge of electronics, mechanisms and programming to tackle the task at hand. A large number of the exam questions will ask you to design solutions to real-life scenarios, by considering inputs, processes and outputs as well as mechanisms and suitable materials. 
+</li>
+<li>You will also likely be asked to perform calculations – the formulae for these are all included at the start of the exam paper.
+</li>
+<li>Questions such as these are difficult to teach. They ask you to look at what you know about electronic components and mechanisms, and to use your creativity to design solutions to unseen problems. To get an idea of how to solve problems like these, there are a set of model solutions <a href="https://www.bournetoinvent.com/projects/gcse_theory/examples.html">here</a>, which show some possible solutions. 
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2 activity">
+<h2 id="sec-2"><span class="section-number-2">2</span> Recap</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-sec-2-1" class="outline-3 try">
+<h3 id="sec-2-1">Past Paper Questions</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li><b>June 2007, Q1.</b> This question is about an automated train carriage door. The door opens and closes using wheels on tracks at the top and bottom of the doorway.
+<ul class="org-ul">
+<li>(a) (i) Give one reason why the train door is made from aluminium. <i>(1 mark)</i>
+</li>
+<li>(ii) Give one reason why the door wheels are made from steel. <i>(1 mark)</i>
+</li>
+<li>(iii) Suggest a suitable material for the door track. <i>(1 mark)</i>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>(b) The simplified diagram below shows a sliding train carriage door. It is in the open position. In Space A on the simplified diagram, design a suitable system that will open and close the carriage door. Draw and label all components and mountings.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/2007_q1b.png" alt="2007_q1b.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Your design must show: 
+<ul class="org-ul">
+<li>a suitable system to close and open the door <i>(3 marks)</i>
+</li>
+<li>suitable mounting of the system to the fixed beam <i>(1 mark)</i>
+</li>
+<li>suitable mounting of the system to the door <i>(1 mark)</i>
+</li>
+<li>labelled components and mountings. <i>(2 marks)</i>
+</li>
+
+<li>(c) Describe how the system that you have drawn in Space A operates. <i>(2 marks)</i>
+</li>
+<li>(d) (i) Give two reasons for your choice of system. <i>(2 marks)</i>
+</li>
+<li>(ii) Name a specific component that could be used to sense that the door has hit an obstruction. <i>(2 marks)</i>
+</li>
+<li>(iii) Give two other Health and Safety issues that should be considered when designing the door system. <i>(2 marks)</i>
+</li>
+</ul>
+</li>
+<li>(e) In use it was found that the door opened and closed too quickly. What could be added to your system to slow down the movement of the door? <i>(2 marks)</i>
+</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>June 2007, Q5.</b> This question is about design issues for railway systems.
+<ul class="org-ul">
+<li>(a) (i) What advantage would an automatic door system on a train give the passengers? <i>(1 mark)</i>
+</li>
+<li>(ii) Give two reasons for your answer. <i>(2 marks)</i>
+</li>
+<li>(b) (i) What advantage would an automatic door system on a train give the train company? <i>(1 mark)</i>
+</li>
+<li>(ii) Give two reasons for your answer. <i>(2 marks)</i>
+</li>
+<li>(c) Suggest how passengers could escape from a train if the automatic door system fails. <i>(3 marks)</i>
+</li>
+<li>(d) State two maintenance requirements of an automatic train door system. <i>(2 marks)</i>
+</li>
+<li>(e) Give two reasons why electric trams are more environmentally friendly than most cars. <i>(2 marks)</i>
+</li>
+<li>(f) A local council wants to encourage car drivers to use trains or trams. Suggest two ways that they could do this. <i>(2 marks)</i>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>June 2007, Q6.</b> This question is about a box-sorting system. An automated conveyor-belt system sorts boxes as they are unloaded from a train. Design a system to sort the boxes.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/2007_q6.png" alt="2007_q6.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Boxes that are higher than 400 mm should carry on along conveyor belt 1.
+</li>
+<li>Boxes that are 400 mm or lower should be sent along conveyor belt 2.
+</li>
+<li>Add your design to the existing drawing opposite. Marks will be awarded as follows:
+<ul class="org-ul">
+<li>the method of sensing the height of a box <i>(5 marks)</i>
+</li>
+<li>the method of sending the lower boxes along conveyor belt 2 <i>(5 marks)</i>
+</li>
+<li>notes and sketches to explain your designs on the drawing below. <i>(2 marks)</i>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>June 2010, Q1.</b> This question is about the design of a lift model to demonstrate control systems to students. A company has asked you to design a portable lift model for schools. The lift model will have a ground floor and a first floor.
+</li>
+<li>(a) The first stage is to produce a Design Specification. Describe three issues which you need to consider before you begin to design the lift model.
+</li>
+<li>For each issue give:
+<ul class="org-ul">
+<li>a consideration <i>(3x 1 mark)</i>
+</li>
+<li>an explanation <i>(3x 1 mark)</i>
+</li>
+<li>a detailed statement for the Design Specification. <i>(3x 2 marks)</i>
+</li>
+</ul>
+</li>
+
+<li>An example has been given to help you.
+<ul class="org-ul">
+<li><i>Consideration: The weight of the lift car.</i>
+</li>
+<li><i>Explanation: If it is too heavy it will be difficult to lift.</i>
+</li>
+<li><i>Statement: The lift car must weigh less than 100g.</i>
+</li>
+</ul>
+</li>
+
+<li>b. Study the simplified view of a lift model shown here.
+</li>
+<li>Sketch and label a design idea to show how the lift car could be raised and lowered by a powered control system.
+</li>
+<li>Sketch larger details of any parts at the side of the main diagram.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/2010_q1b.png" alt="2010_q1b.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Marks will be awarded for:
+<ul class="org-ul">
+<li>a recognisable system <i>(1 mark)</i>
+</li>
+<li>moving the lift between the ground and first floor <i>(2 marks)</i>
+</li>
+<li>sensing when the lift is at the ground and first floor <i>(2 marks)</i>
+</li>
+<li>powering the system <i>(1 mark)</i>
+</li>
+<li>clear sketching and all components labelled. <i>(2 marks)</i>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>June 2010, Q2.</b> You are advised to spend about 10 minutes on this question. This question is about the design of a system to control the lift. The lift should only go up when:
+<ul class="org-ul">
+<li>the doors are shut
+</li>
+<li>the lift is not over loaded (i.e. there is not too much weight in the lift)
+</li>
+<li>the user presses the UP button.
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/2010_q2.png" alt="2010_q2.png" />
+</p>
+</div>
+
+<ul class="org-ul">
+<li>Using only one and two-input logic gates, design a logic circuit that will operate the lift correctly. Marks will be awarded for: -
+<ul class="org-ul">
+<li>logic gates symbols <i>(3 marks)</i>
+</li>
+<li>inputs to gates <i>(5 marks)</i>
+</li>
+<li>output to lift <i>(1 mark)</i>
+</li>
+<li>clarity of drawing. <i>(1 mark)</i>
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/2010_q21.png" alt="2010_q21.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>This question is about a washing machine control system model. The washing machine model is made from plywood and has:
+<ul class="org-ul">
+<li>a door that opens and shuts
+</li>
+<li>a button to start the simulated wash
+</li>
+<li>a door lock to stop the door opening
+</li>
+<li>a geared motor to turn the wash drum
+</li>
+<li>an LED that lights to show that the drum is turning. 
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/2010_q23.png" alt="2010_q23.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>4 (a) (iv) On the diagram below, show how the door lock component you have named is mounted to the body of the washing machine. Show how the component locks the door. Marks will be awarded for:
+<ul class="org-ul">
+<li>a component mounted correctly <i>(1 mark)</i>
+</li>
+<li>a component able to lock the door <i>(1 mark)</i>
+</li>
+<li>a good quality labelled sketch of the component. <i>(2 marks)</i>
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/2010_q24.png" alt="2010_q24.png" />
+</p>
+</div>
+
+<ul class="org-ul">
+<li><b>June 2011, Q6.</b> You should spend about 10 minutes on this question. This question is about the design of a system to sense a person standing in a lift doorway. The system should be activated without the person touching it.
+</li>
+<li>6 (a) Add a suitable system to the drawing below. Your system must show:
+<ul class="org-ul">
+<li>a recognizable system <i>(1 mark)</i>
+</li>
+<li>the ability to detect a person without being touched <i>(1 mark)</i>
+</li>
+<li>components well drawn and labelled. <i>(1 mark)</i>
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/2011_q6a.png" alt="2011_q6a.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>6 (b) Describe the full operation of the system opposite and explain why it would be used. You should:
+<ul class="org-ul">
+<li>explain how the system senses a person
+</li>
+<li>refer to the components that you have drawn
+</li>
+<li>explain how it is used to improve safety.
+</li>
+</ul>
+</li>
+
+<li>You will be tested for quality of written communication in this part of the question. (8 marks)
+</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>June 2012, Q2.</b> You are advised to spend about 15 minutes on this question. This question is about designing the opening and closing system for an automatic greenhouse vent. You have been asked to design an automatic vent for a greenhouse which is battery powered and must be able to open and close. Using notes and sketches, add to the diagram of the greenhouse vent below a design for the vent mechanism which shows the following features:
+<ul class="org-ul">
+<li>a system that can fully open the vent (2 marks)
+</li>
+<li>a method of sensing that the vent is fully open (2 marks)
+</li>
+<li>a system that can fully close the vent (2 marks)
+</li>
+<li>a method of sensing that the vent is fully closed (2 marks)
+</li>
+<li>a secure method of attachment to the greenhouse frame (2 marks)
+</li>
+<li>a suitable power source for the system. (3 marks)
+</li>
+</ul>
+</li>
+<li>Name the system that you have chosen to use:
+</li>
+<li>Greenhouse vent (shown in open position):
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/2012_q2.png" alt="2012_q2.png" />
+</p>
+</div>
+
+<ul class="org-ul">
+<li><b>June 2013, Q1.</b> You are advised to spend about 35 minutes on this question. This question is about designing an automatic system for bird photography. Many bird watchers would like to have a photograph of birds visiting their bird feeder. A manufacturing company have asked you to design an automatic system to operate a camera when a bird is present.
+</li>
+<li>1 (a) The first stage is to produce a Design Specification. For each of the following specification points, give an example of an issue you will need to consider. You should explain your answer. An example response has been given to help you. 
+<ul class="org-ul">
+<li><b>Functional specification point</b> - The system must be waterproof to prevent rain damage.
+</li>
+
+<li><b>Safety specification point:</b> <i>(2 marks)</i>
+</li>
+<li><b>Power supply specification point:</b> <i>(2 marks)</i>
+</li>
+<li><b>Aesthetic specification point:</b> <i>(2 marks)</i>
+</li>
+</ul>
+</li>
+
+<li>1 (b) Using notes and sketches, design a system in the following boxes that meets each of the relevant criteria.
+<ul class="org-ul">
+<li>1 (b) (i) The system can sense that a bird is present. <i>(3 marks)</i>
+</li>
+<li>1 (b) (ii) The system can sense that it is not completely dark. <i>(3 marks)</i>
+</li>
+<li>1 (b) (iii) The system can operate the camera. <i>(3 marks)</i>
+</li>
+<li>1 (b) (iv) The system can let the bird watcher know that the camera has taken a picture. <i>(3 marks)</i>
+</li>
+<li>1 (b) (v) The system is suitable for use outside in the rain. <i>(3 marks)</i>
+</li>
+</ul>
+</li>
+<li>1 (c) Give each stage of operation in the automatic system to operate a camera when a bird is present. Complete the system block diagram below. <i>(3 marks)</i>
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/2013_q1.png" alt="2013_q1.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>1 (d) State two suitable output devices to let the bird watcher know that the camera has taken a picture. Give a suitable design advantage for each device.
+<ul class="org-ul">
+<li>Output device 1
+</li>
+<li>Advantage of output 1
+</li>
+<li>Output device 2
+</li>
+<li>Advantage of output 2 <i>(6 marks)</i>
+</li>
+</ul>
+</li>
+
+<li>1 (e) The case for your system will be manufactured in a batch of 20,000. State a suitable material and process for the manufacture of 20,000 cases for the system you have designed.
+<ul class="org-ul">
+<li>Give a reason for your choice.
+</li>
+<li>Material
+</li>
+<li>Process
+</li>
+<li>Reason <i>(4 marks)</i>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+<a href="index.html">Return to homepage</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="validation"></p>
+</div>
+</body>
+</html>
