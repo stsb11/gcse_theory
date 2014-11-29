@@ -220,4 +220,5 @@ Complete the flowchart of the program for the micro controller by adding:
 - (b) Fully explain why Light Emitting Diodes (LEDs) are replacing lamps in modern traffic lights. /(3 marks)/
 - (c) Test
 - (d) Test2
+- Test 3
 [[file:index.html][Return to homepage]]
