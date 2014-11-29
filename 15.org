@@ -1,0 +1,230 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+BEGIN_COMMENT
+#+STYLE: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+STYLE: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+END_COMMENT
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil 
+#+TITLE: PIC Programming
+#+AUTHOR: Stephen Brown
+
+#+BEGIN_HTML
+<div class=ribbon>
+<a href="https://github.com/stsb11/gcse_theory">Fork me on GitHub</a>
+</div>
+<center>
+<img src='./img/flow_shapes.png' width=50%>
+</center>
+#+END_HTML
+
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+e* Introduction
+[[file:img/pic.jpg]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: intro
+:END:
+** What are PIC chips?
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+Peripheral Interface Controllers are small silicon chips which can be programmed to perform useful tasks.
+In school, we tend to use Genie branded chips, like the C08 model you will use in this project. Others (e.g. PICAXE) are available.
+PIC chips allow you connect different inputs (e.g. switches) and outputs (e.g. LEDs, motors and speakers), and to control them using flowcharts.
+Chips such as these can be found everywhere in consumer electronic products, from toasters to cars. 
+
+While they might not look like much, there is more computational power in a single PIC chip used in school than there was in the space shuttle that went to the moon in the 60's!
+** When would I use a PIC chip?
+Imagine you wanted to make a flashing bike light; using an LED and a switch alone, you'd need to manually push and release the button to get the flashing effect. A PIC chip could be programmed to turn the LED off and on once a second.
+In a board game, you might want to have an electronic dice to roll numbers from 1 to 6 for you. 
+In a car, a circuit is needed to ensure that the airbags only deploy when there is a sudden change in speed, AND the passenger is wearing their seatbelt, AND the front or rear bumper has been struck. PIC chips can carry out their instructions very quickly, performing around 1000 instructions per second - as such, they can react far more quickly than a person can. 
+* Introduction
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+- Simple PIC chips, such as those used in schools often allow programs to be written in either BASIC or using a Flowchart. Commercial chips tend to use a language called Assembler to run programs, which is a little harder to learn, but conceptually the same. The first thing to do is learn the flowchart shapes used by the exam board (these are the same at both GCSE and ‘A’ level).
+- These are shown just under the title of this page.
+
+
+- *Start/stop* indicates the first (/and sometimes, but not always last/) instruction in a flowchart program.
+- *Decisions* allow different things to happen, depending on the state of an input; these always have two flow lines coming away from them (/one for 0, and one for 1/). For example, “Light Switch on?” might lead to “Turn light on” for a 1 output, and “Turn light off” for a 0 output. 
+- *Processes* are the things which happen to the outputs in your system. E.g. “Open door”, “Turn light on”, “close solenoid”, etc.
+- *Subroutines* are small sections of your code that you might want to do over and over in different parts of your program (/e.g. you might have a subroutine to flash some LEDs in a sequence/). A subroutine needs a “Return” at the end of it, to resume the program where it was previously up to before it was called. 
+** Writing a program
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- PIC programs are actually very simple to write once you get the hang of them. They appear every year in the exam, and typically carry almost 10% of the marks in the paper. As such, it is vital that you become comfortable with writing these in the exam-board style. 
+- Remember that each step is performed one at a time.
+- Each shape has a flow-line coming into it, and (/apart from decisions/) one flow-line coming out. Decision diamonds need both a "Y" and an "N" flow line coming out of them.
+- Remember that when writing programs in Circuit Wizard, you need to specify which output pin you want to turn on or off. You may be familiar with seeing output (parallelogram) shapes with things like "High 2" written on your programs (/in this case, the instruction is to turn pin 2 on/). 
+- In the exam, you won't be asked to state a particular pin. You'll need to write things like, "Motor Forward", "Motor off", or "Green LED on".
+- For inputs in Circuit Wizard, you'll normally ask questions like, "Is D0 on". In the exam, you'll need to refer to specific things in the question, so you could write things like, "Inside button pushed?". Text in diamonds must always be phrased as a question, which can have a Yes/No answer. 
+* Recap
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Past Paper Questions
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- *June 2007, Q3.* This question is about constructing a flowchart to control the train door. The signal from the driver ensures that the doors can only open when it is safe. The passenger sensor on the edge of the door signals if it hits an obstruction. The following inputs are available.
+[[./img/2007_q3.png]]
+- Draw a flowchart on a blank page that:
+- Waits until the signal from the driver that states that it is safe for the doors to open,
+- Opens the doors when a passenger presses either push button,
+- Waits 10 seconds then closes the door,
+- If the door hits an obstruction it should open and wait another 10 seconds before closing,
+- Repeats the cycle.
+- Add the missing lines with arrowheads and the states to the decision box outputs of the flowchart on the opposite page.
+- Marks will be awarded for:
+- Correct output state of the decision boxes /(4 x 2 marks)/
+- Correct connecting line drawn with arrows. /(6 x 1 mark)/
+[[./img/2007_q31.png]]
+
+
+- *June 2008, Q4.* This question is about programming PICs to run a roller-coaster loading station. When the operator presses the button, Car 1 rolls onto the ride and, once it is clear, Car 2 rolls into Position A. The whole process is controlled using a Peripheral Interface Controller (PIC) chip. The loading track is on a slight slope so that the cars roll forward when their brake is lowered.
+[[./img/2008_q4.png]]
+- The Sensor is ON when there is a car above it.
+- The Sensor should be checked before Brake 2 is lowered.
+- A 10 second delay is required to allow Car 1 to move away before Car 2 rolls forward. 
+- The process is a Repeatable/Continuous Operation. Write a sequence of instructions that would act as the control program for the above roller-coaster loading system. 
+- Operational instructions to be used:
+[[./img/2008_q41.png]]
+- Assume that the cars are in the position in the diagram on the previous page and that both Brakes are UP at the start.
+- Marks will be awarded for: -
+     - correct sequence /(6 marks)/
+     - correct use of the sensor /(2 marks)/
+     - correct use of a delay /(2 marks)/
+     - continuous operation. /(2 marks)/
+[[./img/2008_q42.png]]
+- *June 2010, Q5b.* The temperature control system operates as follows:
+- The vent opens when the temperature is higher than 31°C
+- To fully open the vent takes 5 seconds going UP
+- The vent closes when the temperature is less than 29°C
+- To close, the vent goes DOWN until closed
+- This process is continuous (non stop).
+
+Complete the flowchart of the program for the micro controller by adding: 
+- each correct output state of the decision boxes /(6 marks)/ Y for Yes and N for No
+- the following statements to the correct Process Boxes /(5 marks)/
+     - Vent motor OFF
+     - Vent motor OFF
+     - Vent DOWN
+     - Vent UP
+     - Wait 5 seconds
+- each correct connecting line, there are four missing lines. /(4 marks)/
+[[./img/2010_q5b.png]]
+- *June 2011, Q4b.* This question is about a washing machine control system model. The washing machine model is made from plywood and has:
+     - a door that opens and shuts
+     - a button to start the simulated wash
+     - a door lock to stop the door opening
+     - a geared motor to turn the wash drum
+     - an LED that lights to show that the drum is turning. 
+[[./img/2011_q4b.png]]	
+- The operation of a temperature control system is as follows: -
+
+     - the user presses the start button switch to start the wash cycle
+     - the system checks that the door is shut
+     - if shut, the door locks
+     - the LED goes ON
+     - the motor turns the drum for 30 seconds
+     - the LED goes OFF
+     - the door unlocks
+     - the system waits for the next push of the start button.
+
+- Complete the flowchart (below) of the program for the micro controller by adding:
+- each correct output state of the decision boxes /(4 marks)/ (use 1 for Yes and 0 for No) each correct connecting line. 
+- There are three missing lines. /(3 marks)/ 
+- The following statements to the correct Process Boxes /(7 marks)/
+
+     - Lock OPEN
+     - LED OFF
+     - LED ON
+     - Motor ON
+     - Lock CLOSE
+     - Wait 30 seconds
+     - Motor OFF
+[[./img/2011_q4b1.png]]
+- *June 2012, Q5d.* (i) In a coffee vending machine, the machine is to be programmed to operate as follows. The machine waits for the customer to insert a 50p coin and then drops a cup. Draw a simple flowchart to show how this would be represented. /(3 marks)/
+[[./img/2012_q5di.png]]
+- (d) (ii) If the customer presses the Sugar button the machine adds sugar. Draw a simple flowchart to show how this would be represented. /(4 marks)/
+
+- (d) (iii) The vend subroutine is shown to the right. Describe the operation of the subroutine. /(3 marks)/
+[[./img/2012_q5diii.png]]
+- (d) (iv) Explain the advantage of using subroutines in complex programs.  /(2 marks)/
+
+
+- *June 2013, Q6.* You are advised to spend about 15 minutes on this question. This question is about programming a microcontroller (PIC) to control a traffic light.
+
+- (a) The lights should repeatedly cycle through the following sequence.
+[[./img/2013_q6.png]]
+ Complete the flowchart below to show how to program the microcontroller (PIC) to control the traffic light. /(12 marks)/
+[[./img/2013_q61.png]]
+- (b) Fully explain why Light Emitting Diodes (LEDs) are replacing lamps in modern traffic lights. /(3 marks)/
+
+
+[[file:index.html][Return to homepage]]
