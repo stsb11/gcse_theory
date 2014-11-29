@@ -64,7 +64,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-* [[./13.html][Lesson 13 - Systems Analysis and Design Specifications]]
+* [[./13.html][Lesson 13 - Manufacturing Techniques]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
