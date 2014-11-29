@@ -6,7 +6,7 @@
 #+STYLE: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
 #+END_COMMENT
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil 
-#+TITLE: PIC Programming
+#+TITLE: Logic Gates
 #+AUTHOR: Stephen Brown
 
 #+BEGIN_HTML
@@ -14,7 +14,7 @@
 <a href="https://github.com/stsb11/gcse_theory">Fork me on GitHub</a>
 </div>
 <center>
-<img src='./img/flow_shapes.png' width=50%>
+<img src='./img/and.png' width=50%>
 </center>
 #+END_HTML
 
@@ -105,14 +105,7 @@ In a car, a circuit is needed to ensure that the airbags only deploy when there 
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-- Simple PIC chips, such as those used in schools often allow programs to be written in either BASIC or using a Flowchart. Commercial chips tend to use a language called Assembler to run programs, which is a little harder to learn, but conceptually the same. The first thing to do is learn the flowchart shapes used by the exam board (these are the same at both GCSE and ‘A’ level).
-- These are shown just under the title of this page.
-
-
-- *Start/stop* indicates the first (/and sometimes, but not always last/) instruction in a flowchart program.
-- *Decisions* allow different things to happen, depending on the state of an input; these always have two flow lines coming away from them (/one for 0, and one for 1/). For example, “Light Switch on?” might lead to “Turn light on” for a 1 output, and “Turn light off” for a 0 output. 
-- *Processes* are the things which happen to the outputs in your system. E.g. “Open door”, “Turn light on”, “close solenoid”, etc.
-- *Subroutines* are small sections of your code that you might want to do over and over in different parts of your program (/e.g. you might have a subroutine to flash some LEDs in a sequence/). A subroutine needs a “Return” at the end of it, to resume the program where it was previously up to before it was called. 
+- Logic
 ** Writing a program
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
