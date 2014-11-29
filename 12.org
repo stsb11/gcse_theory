@@ -14,7 +14,7 @@
 <a href="https://github.com/stsb11/gcse_theory">Fork me on GitHub</a>
 </div>
 <center>
-<img src='./img/etch_tank.jpg' width=50%>
+<img src='./img/2007_q6.png' width=50%>
 </center>
 #+END_HTML
 

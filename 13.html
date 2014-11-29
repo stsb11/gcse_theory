@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Manufacturing Methods</title>
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Manufacturing Methods</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Introduction</a>
+<ul>
+<li><a href="#sec-1-1">Scale of Manufacture</a></li>
+<li><a href="#sec-1-2">One-off</a></li>
+<li><a href="#sec-1-3">Batch production</a></li>
+<li><a href="#sec-1-4">Mass Production</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2. Production Techniques</a></li>
+<li><a href="#sec-3">3. Recap</a>
+<ul>
+<li><a href="#sec-3-1">Past Paper Questions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class=ribbon>
+<a href="https://github.com/stsb11/gcse_theory">Fork me on GitHub</a>
+</div>
+<center>
+<img src='./img/inj_mould.png' width=50%>
+</center>
+
+<div id="outline-container-sec-1" class="outline-2 activity">
+<h2 id="sec-1"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>In addition to being able to make one-off prototypes of products, you need to have an understanding of commercial mass-production methods, which you can refer to in both your coursework and written exam. 
+</li>
+
+<li>Imagine you had designed a toothbrush holder which helped a small child know when they’d brushed their teeth for 2 minutes, which is essentially a plastic box with a PCB inside, and using a micro-switch to detect when the toothbrush had been picked up and replaced.
+</li>
+
+<li>To manufacture one of these, you may use a laser-cutter to produce the sides of the shape, and then glue them together with Tensol solvent cement, and perhaps use M3 bolts to hold the PCB to the case. What if you needed to produce 10,000 though?
+</li>
+</ul>
+</div>
+<div id="outline-container-sec-1-1" class="outline-3 learn">
+<h3 id="sec-1-1">Scale of Manufacture</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Manufacturing can be broadly split into three categories:
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3 learn">
+<h3 id="sec-1-2">One-off</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li><b>One-off jobs</b>, where a single (<i>or very low quantity</i>) item is produced by hand. This is a high cost way of producing goods, but allows pre-production prototypes or custom work to be produced quickly.
+</li>
+<li>Techniques used here might by hand-sawing materials to shape, using nuts and bolts installed and tightened by hand, using a 3D printer to produce precision parts (<i>3D printing is a very slow process, not suited for volume manufacture</i>) or using strip-board to create electronic circuits. 
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-3" class="outline-3 learn">
+<h3 id="sec-1-3">Batch production</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>is where a low number of identical products are made. Jigs and templates are used in machines which can be quickly reconfigured to produce other items when required. 
+</li>
+<li>Typically, workers on a production line will perform a specific task in the production of the product in question, before passing it to the next operative to perform the next task. 
+</li>
+<li>Some techniques such as laser-cutting and vacuum-forming can be used to produce component parts ready for assembly, as well as some hand-making.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-4" class="outline-3 learn">
+<h3 id="sec-1-4">Mass Production</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li>This is where a production line environment is used to manufacture large numbers of items (<i>often assembled by CNC machines</i>) quickly. The initial setup cost is often very high, but the volume of production means a low unit-cost can be achieved. 
+</li>
+<li>Robot arms and other machinery can be used to remove human interaction from the production environment, to allow 24-7 production of parts.
+</li>
+<li>Initially, the line will need to be built, robots programmed, moulds created and QA processes established, at enormous cost. Once set up, changing the product to be made will need the line to be re-configured at a large cost.
+</li>
+<li>At the same time, once in place and working, the unit cost of producing parts becomes very low, due to the ability to produce large numbers for a very low cost.
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2 activity">
+<h2 id="sec-2"><span class="section-number-2">2</span> Production Techniques</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li><b>Saw and Glue.</b> By creating a cutting sheet on a computer, raw materials (e.g. timber and sheet wood) can be cut by machine to the correct dimensions, and then automatically moved into position and glue applied automatically. 
+<ul class="org-ul">
+<li>Items such as furniture and shed panels are often made in this way.
+</li>
+</ul>
+</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>Cut and Weld.</b> For products to be made from metal, a design is first created on computer using CAD software, which is turned into a cutting template. The parts are then punched out of sheet metal, normally fed from a roll, producing consistent sized-parts. These can then be spot or seam welded together by robots. 
+<ul class="org-ul">
+<li>Cars, tables and component racks are manufactured and built this way. 
+</li>
+</ul>
+</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>Vacuum form.</b> For items to be made en-mass from thermoplastics (eg HIPS, acrylic, ABS), a mould is first created in wood (or any heat-resistant material). A sheet of the plastic is placed in an injection moulding machine, and heated until the material is softened. When this happens, the mould is pushed into the softened plastic, and a vacuum pump is turned on, which pulls the material tightly over the mould. 
+<ul class="org-ul">
+<li>Trays for Christmas selection boxes are made this way.
+</li>
+</ul>
+</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>Injection moulding.</b> A method of creating more intricate designs, injection moulding works as follows: -
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="./img/inj_mould.png" alt="inj_mould.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>A hopper is filled with granules of the thermoplastic to be used (e.g. ABS), which are released into the main chamber.
+</li>
+<li>They are driven along towards the mould by an Archimedean screw, passing along a heated section, which melts the plastic to its molten state. 
+</li>
+<li>The plastic is driven into the mould under pressure, and then allowed to cool. Once set, the mould is opened, and the part can be removed. 
+</li>
+<li>Lego bricks, drinks bottles, paperclips and many items are made this way. 
+</li>
+</ul>
+<ul class="org-ul">
+<li>The benefits of these high-volume production techniques are high production rates, design flexibility, products which are consistently repeatability within tolerances (every product will be identical), ability to process a wide range of materials and relatively low labour costs, compared to hand-building everything. 
+</li>
+
+<li>The disadvantages are the high initial setup cost (an injection mould can cost £10,000 for something the size of a lunchbox), expensive machinery needed and highly skilled workers are needed to maintain the machinery. Also, when a machine fails, production may need to stop for a longer period than in a low-volume environment, which may cost the company a substantial amount of money.
+</li>
+
+<li><p>
+<span class="underline">Further reading</span>
+ <a href="http://www.bbc.co.uk/schools/gcsebitesize/design/resistantmaterials/processtechniquesrev3.shtml">http://www.bbc.co.uk/schools/gcsebitesize/design/resistantmaterials/processtechniquesrev3.shtml</a>
+</p>
+
+<p>
+<a href="http://www.bbc.co.uk/schools/gcsebitesize/design/resistantmaterials/processindpracrev1.shtml">http://www.bbc.co.uk/schools/gcsebitesize/design/resistantmaterials/processindpracrev1.shtml</a>
+</p>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2 activity">
+<h2 id="sec-3"><span class="section-number-2">3</span> Recap</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-sec-3-1" class="outline-3 try">
+<h3 id="sec-3-1">Past Paper Questions</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li><b>June 2013, Q1e.</b> The case for a bird-house will be manufactured in a batch of 20000. State a suitable material and process for the manufacture of 20000 cases for the system you have designed. Give a reason for your choice.
+<ul class="org-ul">
+<li>Material 
+</li>
+<li>Process 
+</li>
+<li>Reason <i>(4 marks)</i>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+<a href="index.html">Return to homepage</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="validation"></p>
+</div>
+</body>
+</html>

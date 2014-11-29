@@ -1,0 +1,184 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+BEGIN_COMMENT
+#+STYLE: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+STYLE: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+END_COMMENT
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil 
+#+TITLE: Manufacturing Methods
+#+AUTHOR: Stephen Brown
+
+#+BEGIN_HTML
+<div class=ribbon>
+<a href="https://github.com/stsb11/gcse_theory">Fork me on GitHub</a>
+</div>
+<center>
+<img src='./img/inj_mould.png' width=50%>
+</center>
+#+END_HTML
+
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+e* Introduction
+[[file:img/pic.jpg]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: intro
+:END:
+** What are PIC chips?
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+Peripheral Interface Controllers are small silicon chips which can be programmed to perform useful tasks.
+In school, we tend to use Genie branded chips, like the C08 model you will use in this project. Others (e.g. PICAXE) are available.
+PIC chips allow you connect different inputs (e.g. switches) and outputs (e.g. LEDs, motors and speakers), and to control them using flowcharts.
+Chips such as these can be found everywhere in consumer electronic products, from toasters to cars. 
+
+While they might not look like much, there is more computational power in a single PIC chip used in school than there was in the space shuttle that went to the moon in the 60's!
+** When would I use a PIC chip?
+Imagine you wanted to make a flashing bike light; using an LED and a switch alone, you'd need to manually push and release the button to get the flashing effect. A PIC chip could be programmed to turn the LED off and on once a second.
+In a board game, you might want to have an electronic dice to roll numbers from 1 to 6 for you. 
+In a car, a circuit is needed to ensure that the airbags only deploy when there is a sudden change in speed, AND the passenger is wearing their seatbelt, AND the front or rear bumper has been struck. PIC chips can carry out their instructions very quickly, performing around 1000 instructions per second - as such, they can react far more quickly than a person can. 
+* Introduction
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+- In addition to being able to make one-off prototypes of products, you need to have an understanding of commercial mass-production methods, which you can refer to in both your coursework and written exam. 
+
+- Imagine you had designed a toothbrush holder which helped a small child know when they’d brushed their teeth for 2 minutes, which is essentially a plastic box with a PCB inside, and using a micro-switch to detect when the toothbrush had been picked up and replaced.
+
+- To manufacture one of these, you may use a laser-cutter to produce the sides of the shape, and then glue them together with Tensol solvent cement, and perhaps use M3 bolts to hold the PCB to the case. What if you needed to produce 10,000 though?
+** Scale of Manufacture
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Manufacturing can be broadly split into three categories:
+** One-off
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- *One-off jobs*, where a single (/or very low quantity/) item is produced by hand. This is a high cost way of producing goods, but allows pre-production prototypes or custom work to be produced quickly.
+- Techniques used here might by hand-sawing materials to shape, using nuts and bolts installed and tightened by hand, using a 3D printer to produce precision parts (/3D printing is a very slow process, not suited for volume manufacture/) or using strip-board to create electronic circuits. 
+** Batch production
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- is where a low number of identical products are made. Jigs and templates are used in machines which can be quickly reconfigured to produce other items when required. 
+- Typically, workers on a production line will perform a specific task in the production of the product in question, before passing it to the next operative to perform the next task. 
+- Some techniques such as laser-cutting and vacuum-forming can be used to produce component parts ready for assembly, as well as some hand-making.
+** Mass Production
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- This is where a production line environment is used to manufacture large numbers of items (/often assembled by CNC machines/) quickly. The initial setup cost is often very high, but the volume of production means a low unit-cost can be achieved. 
+- Robot arms and other machinery can be used to remove human interaction from the production environment, to allow 24-7 production of parts.
+- Initially, the line will need to be built, robots programmed, moulds created and QA processes established, at enormous cost. Once set up, changing the product to be made will need the line to be re-configured at a large cost.
+- At the same time, once in place and working, the unit cost of producing parts becomes very low, due to the ability to produce large numbers for a very low cost.
+* Production Techniques
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+- *Saw and Glue.* By creating a cutting sheet on a computer, raw materials (e.g. timber and sheet wood) can be cut by machine to the correct dimensions, and then automatically moved into position and glue applied automatically. 
+    - Items such as furniture and shed panels are often made in this way.
+
+
+- *Cut and Weld.* For products to be made from metal, a design is first created on computer using CAD software, which is turned into a cutting template. The parts are then punched out of sheet metal, normally fed from a roll, producing consistent sized-parts. These can then be spot or seam welded together by robots. 
+    - Cars, tables and component racks are manufactured and built this way. 
+
+
+- *Vacuum form.* For items to be made en-mass from thermoplastics (eg HIPS, acrylic, ABS), a mould is first created in wood (or any heat-resistant material). A sheet of the plastic is placed in an injection moulding machine, and heated until the material is softened. When this happens, the mould is pushed into the softened plastic, and a vacuum pump is turned on, which pulls the material tightly over the mould. 
+    - Trays for Christmas selection boxes are made this way.
+
+
+- *Injection moulding.* A method of creating more intricate designs, injection moulding works as follows: -
+[[./img/inj_mould.png]]
+    - A hopper is filled with granules of the thermoplastic to be used (e.g. ABS), which are released into the main chamber.
+    - They are driven along towards the mould by an Archimedean screw, passing along a heated section, which melts the plastic to its molten state. 
+    - The plastic is driven into the mould under pressure, and then allowed to cool. Once set, the mould is opened, and the part can be removed. 
+    - Lego bricks, drinks bottles, paperclips and many items are made this way. 
+
+- The benefits of these high-volume production techniques are high production rates, design flexibility, products which are consistently repeatability within tolerances (every product will be identical), ability to process a wide range of materials and relatively low labour costs, compared to hand-building everything. 
+
+- The disadvantages are the high initial setup cost (an injection mould can cost £10,000 for something the size of a lunchbox), expensive machinery needed and highly skilled workers are needed to maintain the machinery. Also, when a machine fails, production may need to stop for a longer period than in a low-volume environment, which may cost the company a substantial amount of money.
+
+- _Further reading_
+ http://www.bbc.co.uk/schools/gcsebitesize/design/resistantmaterials/processtechniquesrev3.shtml
+
+ http://www.bbc.co.uk/schools/gcsebitesize/design/resistantmaterials/processindpracrev1.shtml
+
+* Recap
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Past Paper Questions
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- *June 2013, Q1e.* The case for a bird-house will be manufactured in a batch of 20000. State a suitable material and process for the manufacture of 20000 cases for the system you have designed. Give a reason for your choice.
+  - Material 
+  - Process 
+  - Reason /(4 marks)/
+
+[[file:index.html][Return to homepage]]
