@@ -218,5 +218,5 @@ Complete the flowchart of the program for the micro controller by adding:
  Complete the flowchart below to show how to program the microcontroller (PIC) to control the traffic light. /(12 marks)/
 [[./img/2013_q61.png]]
 - (b) Fully explain why Light Emitting Diodes (LEDs) are replacing lamps in modern traffic lights. /(3 marks)/
-- (c)
+- (c) Test
 [[file:index.html][Return to homepage]]
