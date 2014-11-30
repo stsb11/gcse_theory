@@ -105,17 +105,54 @@ In a car, a circuit is needed to ensure that the airbags only deploy when there 
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-- Logic
-** Writing a program
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: learn
-:END:
-- PIC programs are actually very simple to write once you get the hang of them. They appear every year in the exam, and typically carry almost 10% of the marks in the paper. As such, it is vital that you become comfortable with writing these in the exam-board style. 
-- Remember that each step is performed one at a time.
-- Each shape has a flow-line coming into it, and (/apart from decisions/) one flow-line coming out. Decision diamonds need both a "Y" and an "N" flow line coming out of them.
-- Remember that when writing programs in Circuit Wizard, you need to specify which output pin you want to turn on or off. You may be familiar with seeing output (parallelogram) shapes with things like "High 2" written on your programs (/in this case, the instruction is to turn pin 2 on/). 
-- In the exam, you won't be asked to state a particular pin. You'll need to write things like, "Motor Forward", "Motor off", or "Green LED on".
-- For inputs in Circuit Wizard, you'll normally ask questions like, "Is D0 on". In the exam, you'll need to refer to specific things in the question, so you could write things like, "Inside button pushed?". Text in diamonds must always be phrased as a question, which can have a Yes/No answer. 
+- Whether programming a PIC chip or designing a circuit to use components, a good understanding of the basic logic gates will make your work easier. Electronic circuits, computers, games consoles and mobile ‘phones all use logic gates for their decision making processes. 
+- Logic gates typically operate using wither one or two inputs, which are either off (usually referred to as being “logic low” or 0), or on (referred to as being “high” or 1). 
+- In electronics, 5v usually indicates a logical high, and 0V for a logic low state. 
+
+
+- The *AND* gate only gives a logic high when both its inputs are high. i.e. Input 1 AND input 2 both need to be high. 
+#+BEGIN_HTML
+<center>
+<object data="js/AND.html" width='200px' height='100px'></object>
+</center>
+#+END_HTML
+- Some questions ask you to draw a truth table. This is a table which shows all the possible permutations of the inputs. A and B are used to denote inputs, and Q is the output value. In the first row here, we can see that when both the inputs are turned off (are low), the output is also low. The truth table for the AND gate is:
+
+| <3> | <3> | <3> |
+| A   | B   | Q   |
+|-----+-----+-----|
+| 0   | 0   | 0   |
+| 0   | 1   | 0   |
+| 1   | 0   | 0   |
+| 1   | 1   | 1   |
+
+- The *OR* gate gives a logic high when either (or both) of its inputs are high. i.e. Input 1 OR input 2 OR both are high. 
+#+BEGIN_HTML
+<center>
+<object data="js/OR.html" width='200px' height='100px'></object>
+</center>
+#+END_HTML
+| <3> | <3> | <3> |
+| A   | B   | Q   |
+|-----+-----+-----|
+| 0   | 0   | 0   |
+| 0   | 1   | 1   |
+| 1   | 0   | 1   |
+| 1   | 1   | 1   |
+
+- The *NOT* gate is unique in having only one input. Sometimes called the invertor gate, it inverts whatever input is sent into it. 
+#+BEGIN_HTML
+<center>
+<object data="js/NOT.html" width='200px' height='100px'></object>
+</center>
+#+END_HTML
+| <3> | <3> |
+|   A |   Q |
+|-----+-----|
+|   0 |   1 |
+|   1 |   0 |
+
+
 * Recap
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -124,105 +161,75 @@ In a car, a circuit is needed to ensure that the airbags only deploy when there 
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-- *June 2007, Q3.* This question is about constructing a flowchart to control the train door. The signal from the driver ensures that the doors can only open when it is safe. The passenger sensor on the edge of the door signals if it hits an obstruction. The following inputs are available.
-[[./img/2007_q3.png]]
-- Draw a flowchart on a blank page that:
-- Waits until the signal from the driver that states that it is safe for the doors to open,
-- Opens the doors when a passenger presses either push button,
-- Waits 10 seconds then closes the door,
-- If the door hits an obstruction it should open and wait another 10 seconds before closing,
-- Repeats the cycle.
-- Add the missing lines with arrowheads and the states to the decision box outputs of the flowchart on the opposite page.
+- *Q2, June 2007.* This question is about using logic gates to control a train door. 
+  - (i) Complete the following by naming the logic gates shown and drawing the symbol where appropriate.
+[[./img/2007_q2.png]]
+- (ii) Complete the truth tables for the three logic gates.
+- It has been decided to operate a train door using push button switches. In this system, three push button switches operate the system (inside/ outside/ driver control).
+- The door is opened by passengers pressing a push button switch next to the door. The door opening device operates and the door opens. The door should open when push button switch 1 or push button switch 2 is pressed and the driver operates a control.
+[[./img/2007_q21.png]]
+- Construct a logic circuit to open the door using two 2-input logic gates to complete the logic circuit. Marks will be awarded for:
+  - Logic gate symbols /(2 marks)/
+  - Inputs to gates /(4 marks)/
+  - Output to door /(1 mark)/
+  - Neatness. /(2 marks)/
+
+
+- *June 2008, Q5.* This question is about logic and operating a moving target. A stall holder gives a prize if the customer knocks down all three targets. 
+[[./img/2008_q5.png]]
+- In this system:
+  - 3 push switches operate the system,
+  - There is a push switch attached to each target,
+  - The bulb should only come ON when all three targets are knocked down.
+[[./img/2008_q51.png]]
+
+- (a) Using two logic gates, construct a circuit in the space below to join the three push switches to the bulb. Each logic gate should have two inputs. Marks will be awarded for:
+
+  - logic gates symbols (2 marks)
+  - inputs to gates (4 marks)
+  - output to bulb (1 mark)
+  - quality of drawing. (1 mark)
+[[./img/2008_q52.png]]
+
+- (b) Design a system to stand the target back up automatically when the operator resets the game. Draw a mechanical or pneumatic system in Space B that will stand the target back up. The system will need to allow the target to fall when hit.
+[[./img/2008_q5b.png]]
+
+- The side view of only one target is shown above, which is in the down position the target will remain upright against the stop some of the detail of the target has been omitted for clarity.
+
 - Marks will be awarded for:
-- Correct output state of the decision boxes /(4 x 2 marks)/
-- Correct connecting line drawn with arrows. /(6 x 1 mark)/
-[[./img/2007_q31.png]]
+  - a system able to lift the target to the vertical (3 marks)
+  - a system able to allow the target to fall when hit (3 marks)
+  - a suitable mounting of the system (1 mark)
+  - the quality of notes describing the operation. (4 marks)
 
 
-- *June 2008, Q4.* This question is about programming PICs to run a roller-coaster loading station. When the operator presses the button, Car 1 rolls onto the ride and, once it is clear, Car 2 rolls into Position A. The whole process is controlled using a Peripheral Interface Controller (PIC) chip. The loading track is on a slight slope so that the cars roll forward when their brake is lowered.
-[[./img/2008_q4.png]]
-- The Sensor is ON when there is a car above it.
-- The Sensor should be checked before Brake 2 is lowered.
-- A 10 second delay is required to allow Car 1 to move away before Car 2 rolls forward. 
-- The process is a Repeatable/Continuous Operation. Write a sequence of instructions that would act as the control program for the above roller-coaster loading system. 
-- Operational instructions to be used:
-[[./img/2008_q41.png]]
-- Assume that the cars are in the position in the diagram on the previous page and that both Brakes are UP at the start.
-- Marks will be awarded for: -
-     - correct sequence /(6 marks)/
-     - correct use of the sensor /(2 marks)/
-     - correct use of a delay /(2 marks)/
-     - continuous operation. /(2 marks)/
-[[./img/2008_q42.png]]
-- *June 2010, Q5b.* The temperature control system operates as follows:
-- The vent opens when the temperature is higher than 31°C
-- To fully open the vent takes 5 seconds going UP
-- The vent closes when the temperature is less than 29°C
-- To close, the vent goes DOWN until closed
-- This process is continuous (non stop).
+- *June 2011, Q1d.* The cabin light in a car should only come ON when both of the following occur:
+  - either car door opens
+  - it is dark
 
-Complete the flowchart of the program for the micro controller by adding: 
-- each correct output state of the decision boxes /(6 marks)/ Y for Yes and N for No
-- the following statements to the correct Process Boxes /(5 marks)/
-     - Vent motor OFF
-     - Vent motor OFF
-     - Vent DOWN
-     - Vent UP
-     - Wait 5 seconds
-- each correct connecting line, there are four missing lines. /(4 marks)/
-[[./img/2010_q5b.png]]
-- *June 2011, Q4b.* This question is about a washing machine control system model. The washing machine model is made from plywood and has:
-     - a door that opens and shuts
-     - a button to start the simulated wash
-     - a door lock to stop the door opening
-     - a geared motor to turn the wash drum
-     - an LED that lights to show that the drum is turning. 
-[[./img/2011_q4b.png]]	
-- The operation of a temperature control system is as follows: -
+- Using only logic gates, design a logic circuit that will operate the interior light correctly. Marks will be awarded for:
+  - logic gates symbols /(3 marks)/
+  - inputs to gates /(5 marks)/
+  - output to light /(1 mark)/
+  - neatness. /(1 mark)/
+[[./img/2011_q1d.png]]
 
-     - the user presses the start button switch to start the wash cycle
-     - the system checks that the door is shut
-     - if shut, the door locks
-     - the LED goes ON
-     - the motor turns the drum for 30 seconds
-     - the LED goes OFF
-     - the door unlocks
-     - the system waits for the next push of the start button.
+- *June 2013, Q5.* You are advised to spend about 15 minutes on this question. This question is about a system that automatically turns on a boat’s pump. The diagram below shows a boat with a pump room and two other rooms.
+[[./img/2013_q5.png]]
 
-- Complete the flowchart (below) of the program for the micro controller by adding:
-- each correct output state of the decision boxes /(4 marks)/ (use 1 for Yes and 0 for No) each correct connecting line. 
-- There are three missing lines. /(3 marks)/ 
-- The following statements to the correct Process Boxes /(7 marks)/
+- If water is present in either Room 1 or Room 2, and the trapdoor to the pump room is closed, the pump automatically starts working. The diagram here shows the logic for the boat pump system.
+[[./img/2013_q5a.png]]
+- (a) Name the gates in the logic diagram. 
+  - Gate 1:
+  - Gate 2:
+  - Gate 3: /(3 marks)/
 
-     - Lock OPEN
-     - LED OFF
-     - LED ON
-     - Motor ON
-     - Lock CLOSE
-     - Wait 30 seconds
-     - Motor OFF
-[[./img/2011_q4b1.png]]
-- *June 2012, Q5d.* (i) In a coffee vending machine, the machine is to be programmed to operate as follows. The machine waits for the customer to insert a 50p coin and then drops a cup. Draw a simple flowchart to show how this would be represented. /(3 marks)/
-[[./img/2012_q5di.png]]
-- (d) (ii) If the customer presses the Sugar button the machine adds sugar. Draw a simple flowchart to show how this would be represented. /(4 marks)/
+- (b) If water is present in either Room 1 or Room 2 and the trapdoor to the pump room is closed, the pump automatically starts working. Complete the following truth table for the logic circuit shown above. (4 marks)
+[[./img/2013_q5b.png]]
+- (c) Use notes and sketches to show a suitable sensor for sensing that water is present in a room. /(4 marks)/
 
-- (d) (iii) The vend subroutine is shown to the right. Describe the operation of the subroutine. /(3 marks)/
-[[./img/2012_q5diii.png]]
-- (d) (iv) Explain the advantage of using subroutines in complex programs.  /(2 marks)/
+- (d) Suggest two advantages of using a Microcontroller (PIC) rather than discrete Logic Integrated Circuits (ICs) in an electronic product.
+  - Advantage 1:
+  - Advantage 2: /(4 marks)/
 
-
-- *June 2013, Q6.* You are advised to spend about 15 minutes on this question. This question is about programming a microcontroller (PIC) to control a traffic light.
-
-- (a) The lights should repeatedly cycle through the following sequence.
-[[./img/2013_q6.png]]
- Complete the flowchart below to show how to program the microcontroller (PIC) to control the traffic light. /(12 marks)/
-[[./img/2013_q61.png]]
-- (b) Fully explain why Light Emitting Diodes (LEDs) are replacing lamps in modern traffic lights. /(3 marks)/
-- (c) Test
-- (d) Test2
-- Test 3
-- Test 4
-- Test 5
-- Test 6
-- Test 6
 [[file:index.html][Return to homepage]]
