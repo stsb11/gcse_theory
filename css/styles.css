@@ -171,6 +171,9 @@ h1 {
 .activity h2 a:visited {
   color: #ffffff;
 }
+.activity h2 a:link {
+  color: #ffffff;
+}
 /* mouse over link */
 .activity h2 a:hover {
   color: #dddddd;
