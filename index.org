@@ -15,6 +15,10 @@
 <div class=ribbon>
 <a href="https://github.com/stsb11/gcse_theory">Fork me on GitHub</a>
 </div>
+<center>
+<br>
+<img src=img/gear.png width=25%>
+</center>
 #+END_HTML
 * [[file:1.html][Lesson 01 - Basics]]
 :PROPERTIES:
@@ -77,6 +81,10 @@
 :HTML_CONTAINER_CLASS: activity
 :END:
 * [[./16.html][Lesson 16 - Social, Moral, Ethical and Sustainability Issues]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+* [[http://www.aqa.org.uk/subjects/design-and-technology/gcse/design-and-technology-systems-and-control-technology-4565/past-papers-and-mark-schemes][AQA Past Exam papers]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
