@@ -139,6 +139,8 @@ _Examples_ A door lock. When the release button is pushed, the door is unlocked 
 
 A hand drier. When a hand triggers the sensor, the drier runs for around 30 seconds before turning off again.
 
+A Circuit Wizard example you can download to experiment with can be picked up [[./mono.cwz][here]].
+
 ** 555 as an astable
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
@@ -160,6 +162,7 @@ A burglar alarm could have its sensors send a pulse to the alarm box to say its 
 
 A strobe bike light could be produced to keep cyclists safe at night
 
+A Circuit Wizard example you can download to experiment with can be picked up [[./astable.cwz][here]].
 * Understanding Check
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
