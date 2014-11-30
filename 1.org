@@ -111,9 +111,10 @@ In a car, a circuit is needed to ensure that the airbags only deploy when there 
 :END:
 - Before you can do anything to design and create new, original projects, you'll need to understand three fundamental electronic concepts. 
 - *Voltage*, is the difference in energy level between two points in a circuit, which will allow electrons to move through a conductor. The more difference in energy levels there is, the larger the amount of current can be drawn, and the larger item they can power. A basic red LED might only need 2.7V to run, whereas a laptop might need 24V, and a large electric motor moving a lift might need 415V to operate. 
-- **Current** is a measure of how many electrons pass a particular point in the circuit per second. Higher current (measured in Amps) means faster electron flow in the circuit. The process of moving electrons through a material generates frictional heat. If the wire used in a product is too thin, and too much current passes through it, the wire will melt! This is the principal on which fuses are made. 
+- **Current** is a measure of how many electrons pass a particular point in the circuit per second. Higher current (/measured in Amps/) means faster electron flow in the circuit. The process of moving electrons through a material generates frictional heat. If the wire used in a product is too thin, and too much current passes through it, the wire will melt! This is the principal on which fuses are made. 
 - **Resistance** is a measure of to what extent a material resists the flow of current in a circuit, and is measured in Ohms. Good conductors of electricity (like copper and gold) have very low resistance (1-2 \Omega{}), and insulators (like rubber and plastic) have a high resistance (several million Ohms). 
-- An excellent explanation of this can be seen over at [[https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law][SparkFun]]. 
+- Another explanation (with interactive demonstrations) can be seen [[https://www.bournetoinvent.com/projects/7-SC-Torch/pages/1_Lesson.html][here]].
+- Another explanation of the concepts can be seen over at [[https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law][SparkFun]]. 
 ** Try it
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
@@ -126,7 +127,7 @@ In a car, a circuit is needed to ensure that the airbags only deploy when there 
 |-------+--------+----------|
 |     0 | Black  | Bye      |
 |     1 | Brown  | Bye      |
-|     2 | Red    |Rosie     |
+|     2 | Red    | Rosie    |
 |     3 | Orange | Off      |
 |     4 | Yellow | You      |
 |     5 | Green  | Go       |
@@ -135,7 +136,17 @@ In a car, a circuit is needed to ensure that the airbags only deploy when there 
 |     8 | Grey   | Great    |
 |     9 | White  | Western  |
 
-- Get someone to give you 4 different resistors. Read the coloured bands to see what their values are, and then use the [[https://www.bournetoinvent.com/projects/soldering_license/step_5.html][multimeter]] to confirm. 
+- To read the value, hold the resistor you want with the gold band on the right-hand side. The gold band indicates that the resistor is accurate to +/-5%.
+- The first band (on the left) gives you the value of the first digit.
+- The second band gives you the value of the next digit.
+- The third band tells you how many zeroes to add to get the value of the resistor.
+- For instance, a resistor which is yellow, violet, orange, gold would be...
+- Yellow (so write down 4)
+- Violet (so write a 7 next to the 4)
+- Orange (so write three zeroes next to the other digits)
+- So this would be a 47000\Omega resistor
+
+- Get someone to give you 4 different resistors. Read the coloured bands to see what their values are, and then use the [[https://www.bournetoinvent.com/projects/soldering_license/step_5.html][*multimeter*]] to confirm. 
 - Choosing the correct setting to measure DC Voltage (DCV) is the same as for measuring resistance. It doesn't really make a difference, but its more "correct" to use the black (common) probe for the negative end of the battery, and the red on the right.
 -  Use the multimeter to discover how many volts each of the following produces:
 	- Square battery (PP3)
