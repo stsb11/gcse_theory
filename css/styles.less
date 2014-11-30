@@ -1,8 +1,29 @@
-@scheme-color: #111111; /* Background block colour */
+/*YEAR 7 Colours*/
+
+/*
+@scheme-color: #0071BB;
+@scheme-color-secondary: #E0E7F5;
+*/
+
+/*YEAR 8 Colours*/
+/*
+@scheme-color: #741371;
+@scheme-color-secondary:#E5DCE9;
+*.
+
+/*YEAR 9 Colours*/
+/*
+@scheme-color: #D12229;
+@scheme-color-secondary: #F7E4DC;
+*/
+
+/* GCSE Colours */
+@scheme-color: #000000;
+@scheme-color-secondary: #cccccc;
 @scheme-font-colour: #FFFFFF; /* Text colour */
 @scheme-font-visited-colour: #FFFFFF;
 @scheme-font-hover-colour: #DDDDDD;  
-@scheme-font-active-colour: #CCCCCC;				
+@scheme-font-active-colour: #CCCCCC;
 
 @scheme-font: 'Ubuntu', Helvetica, Arial, sans-serif;
 @code-font: 'Ubuntu mono', "Courier New", Courier, monospace;
@@ -34,7 +55,8 @@
 /*Main Styles*/
 
 * {
-    margin: 0px padding: 0px;
+    margin: 0px;
+    padding: 0px;
     font: Arial, Helvetica, sans-serif;
 }
 
@@ -125,6 +147,35 @@ pre {
 
 /* CSS For Lesson*/
 
+.link-heading {
+    font-size: 15px;
+    background: @scheme-color;
+    margin-top: 10px;
+    padding: 10px 10px;
+    border-radius: 3px;
+    a:link{
+	color:#FFFFFF;
+    }
+    a:visited{
+	color:#FFFFFF;
+    }
+    a:hover{
+	color:#808080
+    }
+}
+
+.link-heading a:link{
+    color:#FFFFFF
+}
+
+.link-heading a:visited{
+	color:#FFFFFF;
+}
+
+.link-heading a:hover{
+    color:#cccccc;
+    }
+
 h1{
     font-size:50px;
     color: @scheme-color;
@@ -132,12 +183,16 @@ h1{
     margin-right: auto;
 }
 
-/* Activity link colourings */
-/* unvisited link */
-.activity h2 a:link {
-    color: @scheme-font-colour;
+.activity h2 {
+    font-size: 30px;
+    color: #FFF;
+    background: @scheme-color;
+    margin-top: 30px;
+    padding: 10px 10px;
+    border-radius: 5px;
 }
 
+/* BrownSoft Software Engineering Co. REPAIR */
 /* visited link */
 .activity h2 a:visited {
     color: @scheme-font-visited-colour;
@@ -153,22 +208,16 @@ h1{
     color: @scheme-font-active-colour;
 }
 
+/* BrownSoft Out. Invoice attached.------------ */
 
-.activity h2 {
-    font-size: 30px;
-    color: #FFF;
-    background: @scheme-color;
-    margin-top: 30px;
-    padding: 10px 10px;
-    border-radius: 5px;
-}
-.activity img {
+
+.activity img, video,object{
     padding: 5px;
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    max-width:600px;
+    max-width:1000px;
 }
 
 .activity iframe {
@@ -245,24 +294,101 @@ h3 {
 }
 
 /*CSS FOR LISTS*/
-
-li:before{
-    clear:none;
-    font-size: 16px;        
-    line-height:24px;
-    margin-top:3px;
-    float:left;
+ul li:before {
+    clear: none;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 3px;
     list-style-position: outside;
     margin-left: 5px;
     content: " ";
     border-radius: 4px;
     border: 2px solid @scheme-color;
     padding: 6px 6px;
-    margin-right:20px;
-    float:left;
+    margin-right: 20px;
+    float: left;
+}
+.org-ol {
+    list-style-type: none;
+    list-style-type: decimal !ie;
+    /*IE 7- hack*/
+    counter-reset: li-counter;
+}
+.org-ol > li {
+    position: relative;
+    margin-bottom: 6px;
+}
+.org-ol > li:before {
+    clear: none;
+    color: white;
+    background-color: @scheme-color;
+    font-size: 10px;
+    line-height: 10px;
+    margin: 1px;
+    list-style-position: outside;
+    margin-left: 5px;
+    content: " ";
+    border-radius: 4px;
+    padding: 3px 5px 3px 5px;
+    margin-right: 10px;
+    float: left;
+    content: counter(li-counter);
+    counter-increment: li-counter;
+}
+ul {
+    list-style-type: none;
+    line-height: 24px;
 }
 
-ul{
-    list-style-type:none;
-    line-height:24px;
+blockquote {
+    text-align:left;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-style: italic;
+    width: 600px;
+    margin-left: 100px;
+    padding: 0.25em 40px;
+    line-height: 1.45;
+    position: relative;
+    color: #383838;
+}
+
+blockquote:before {
+    display: block;
+    content: "\201C";
+    font-size: 80px;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    color: #7a7a7a;
+}
+blockquote cite {
+    color: #999999;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+}
+
+blockquote cite:before {
+    content: "\2014 \2009";
+}
+
+/*TABLES GRRR*/
+table {
+    border: 2px solid @scheme-color;;
+    border-collapse: collapse;
+    width: 800px;
+    text-align:center;
+    th{
+	background:@scheme-color-secondary;
+	border: 2px solid @scheme-color;
+	color: @scheme-color;
+	height:40px;
+	vertical-align:middle;
+    }
+    td{
+	border: 2px solid @scheme-color;
+	text-align:center;
+	padding:1px;
+    }
 }
