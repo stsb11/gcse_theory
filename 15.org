@@ -118,7 +118,7 @@ In a car, a circuit is needed to ensure that the airbags only deploy when there 
 #+END_HTML
 - Some questions ask you to draw a truth table. This is a table which shows all the possible permutations of the inputs. A and B are used to denote inputs, and Q is the output value. In the first row here, we can see that when both the inputs are turned off (are low), the output is also low. The truth table for the AND gate is:
 
-| <3> | <3> | <3> |
+| <c> | <c> | <c> |
 | A   | B   | Q   |
 |-----+-----+-----|
 | 0   | 0   | 0   |
@@ -132,7 +132,7 @@ In a car, a circuit is needed to ensure that the airbags only deploy when there 
 <object data="js/OR.html" width='200px' height='100px'></object>
 </center>
 #+END_HTML
-| <3> | <3> | <3> |
+| <c> | <c> | <c> |
 | A   | B   | Q   |
 |-----+-----+-----|
 | 0   | 0   | 0   |
@@ -146,12 +146,11 @@ In a car, a circuit is needed to ensure that the airbags only deploy when there 
 <object data="js/NOT.html" width='200px' height='100px'></object>
 </center>
 #+END_HTML
-| <3> | <3> |
+| <c> | <c> |
 |   A |   Q |
 |-----+-----|
 |   0 |   1 |
 |   1 |   0 |
-
 
 * Recap
 :PROPERTIES:
