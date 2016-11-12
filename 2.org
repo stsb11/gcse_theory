@@ -172,7 +172,7 @@ Task: Complete the following tables, using the Internet and text book to help yo
 |------------------------------+----------------------------------------------------------------------+---------------------------------|
 | Smart memory Alloys          | Can be bent out of shape, but returns to original shape when heated. |                                 |
 | Piezoelectric materials      |                                                                      | Mics, speakers, alarm systems.  |
-| Quantum Tunnelling compsite  | An insulator which becomes a conductor when put under pressure.      |                                 |
+| Quantum Tunnelling composite | An insulator which becomes a conductor when put under pressure.      |                                 |
 | Electroluminescent Materials |                                                                      | Safety clothing, safety lights. |
 
 * Understanding Check
